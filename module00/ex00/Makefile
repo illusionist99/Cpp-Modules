@@ -7,7 +7,7 @@ FLAGS= -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	clang++ $(FLAGS) megaphone.cpp -o $(NAME)
+	clang++ $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)
