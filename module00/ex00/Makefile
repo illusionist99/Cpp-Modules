@@ -2,10 +2,12 @@ NAME= megaphone
 
 SRC= megaphone.cpp
 
+FLAGS= -Wall -Wextra -Werror
+
 all: $(NAME)
 
 $(NAME):
-	clang++ megaphone.cpp -o $(NAME)
+	clang++ $(FLAGS) megaphone.cpp -o $(NAME)
 
 clean:
 	rm -rf $(NAME)
