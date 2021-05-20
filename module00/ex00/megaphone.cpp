@@ -12,7 +12,7 @@
 
 #include <iostream>
 
-void    upper(char **s)
+void    upper(char **s, int nb_of_arguments)
 {
     int i;
     int j;
@@ -27,7 +27,8 @@ void    upper(char **s)
             std::cout << (char )std::toupper(s[j][i]);
             i++;
         }
-        std::cout << " ";
+        if (j != nb_of_arguments - 2)
+            std::cout << " ";
         j++;
     }
     std::cout << std::endl;  
@@ -37,6 +38,6 @@ int     main(int ac, char **av)
     if (ac == 1)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
     else
-        upper(av + 1);
+        upper(av + 1, ac);
     return (0);
 }

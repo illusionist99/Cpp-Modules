@@ -3,7 +3,7 @@
 int             main(void)
 {
     std::string     s;
-    contact         contacts[9];
+    contact         contacts[8];
 
     contacts->count = 0;
     while (true)

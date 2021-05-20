@@ -13,6 +13,8 @@ $(NAME):
 clean:
 	rm -rf $(NAME)
 
+fclean: clean
+
 re:	clean all
 
 .PHONY:	clean re

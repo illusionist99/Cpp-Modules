@@ -61,4 +61,29 @@ void    contact::search_contacts(contact *contacts)
         print_truncated(contacts[i].login, 1);
         i++;
     }
+    std::string id;
+    prompt("Select Contact Id :", &id);
+    int account_id;
+    try
+    {
+        account_id = std::stoi(id);
+    }
+    catch(std::exception& e){
+        std::cout<< e.what() << std::endl;
+    }
+
+    if (account_id >= 0 && account_id < contacts->count)
+    {
+        std::cout << "First Name: " << contacts[account_id].first_name << std::endl;
+        std::cout << "Last Name: " << contacts[account_id].last_name << std::endl;
+        std::cout << "NickName: " << contacts[account_id].nickname << std::endl;
+        std::cout << "Login: " << contacts[account_id].login << std::endl;
+        std::cout << "Postal address: " << contacts[account_id].postal_address << std::endl;
+        std::cout << "Email: " << contacts[account_id].email << std::endl;
+        std::cout << "Phone Number: " << contacts[account_id].phone_number << std::endl;
+        std::cout << "BirthDay: " << contacts[account_id].birthday << std::endl;
+        std::cout << "Favorite Meal: " << contacts[account_id].favorite_meal << std::endl;
+        std::cout << "UnderWear Color: " << contacts[account_id].underwear_color << std::endl;
+        std::cout << "Darkest Secret: " << contacts[account_id].darkest_secret << std::endl;
+    }
 }
