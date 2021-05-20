@@ -6,8 +6,7 @@
 
 class contact {
 
-  public:
-
+  private:
     std::string   first_name;
     std::string   last_name;
     std::string   nickname;
@@ -19,7 +18,8 @@ class contact {
     std::string   favorite_meal;
     std::string   underwear_color;
     std::string   darkest_secret;
-
+  
+  public:
     int     count;
     void    add_contact( void );
     void    search_contacts(contact *contacts);
