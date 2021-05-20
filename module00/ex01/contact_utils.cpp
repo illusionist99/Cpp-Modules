@@ -15,16 +15,26 @@ void    prompt(std::string msg, std::string *s)
 
 void    contact::add_contact( void )
 {
-    prompt("First Name: ", &this->first_name);
-    prompt("Last Name: ", &this->last_name);
-    prompt("Nickname: ", &this->nickname);
-    prompt("Login: ", &this->login);
-    prompt("Postal Address: ", &this->postal_address);
-    prompt("Email: ", &this->email);
-    prompt("Phone Number: ", &this->phone_number);
-    prompt("Favorite Meal: ", &this->favorite_meal);
-    prompt("Underwear Color: ", &this->underwear_color);
-    prompt("Darkest Secret: ", &this->darkest_secret);
+    while (this->first_name == "")
+        prompt("First Name: ", &this->first_name);
+    while (this->last_name == "")
+        prompt("Last Name: ", &this->last_name);
+    while (this->nickname == "")
+        prompt("Nickname: ", &this->nickname);
+    while (this->login == "")
+        prompt("Login: ", &this->login);
+    while (this->postal_address == "")
+        prompt("Postal Address: ", &this->postal_address);
+    while (this->email == "")
+        prompt("Email: ", &this->email);
+    while (this->phone_number == "")
+        prompt("Phone Number: ", &this->phone_number);
+    while (this->favorite_meal == "")
+        prompt("Favorite Meal: ", &this->favorite_meal);
+    while (this->underwear_color == "")
+        prompt("Underwear Color: ", &this->underwear_color);
+    while (this->darkest_secret == "")
+        prompt("Darkest Secret: ", &this->darkest_secret);
 }
 
 void        print_truncated(std::string s, int endl)
@@ -63,7 +73,7 @@ void    contact::search_contacts(contact *contacts)
     }
     std::string id;
     prompt("Select Contact Id :", &id);
-    int account_id;
+    int account_id = 777;
     try
     {
         account_id = std::stoi(id);
