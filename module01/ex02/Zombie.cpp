@@ -1,16 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/22 15:45:23 by malaoui           #+#    #+#             */
+/*   Updated: 2021/05/22 15:45:23 by malaoui          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Zombie.hpp"
 
-void   Zombie::advert()
-{
-    std::cout << "< " << this->nom << " " << this->type << " >  Braiiiiiiinnnssss ..." << std::endl;
-}
-
-int main( void )
-{
-    Zombie l;
-
-    l.nom = "hhhh";
-    l.type = "ffff";
-    l.advert();
-    return (0);
+void    Zombie::advert( void ) const {
+    std::cout << "<" << this->name << " (" << this->type << ") > Braiiiiiiinnnssss ..." << std::endl;
 }

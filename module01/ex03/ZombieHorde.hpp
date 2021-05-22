@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/22 15:45:10 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/22 15:45:11 by malaoui          ###   ########.fr       */
+/*   Created: 2021/05/22 15:45:39 by malaoui           #+#    #+#             */
+/*   Updated: 2021/05/22 15:45:40 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#ifndef __ZOMBIEHORDE_HPP__
+# define __ZOMBIEHORDE_HPP__
 
-int		main( void ) {
+#include "Zombie.hpp"
 
-	Pony stack = Pony::ponyOnTheStack();
-	Pony *heap = Pony::ponyOnTheHeap();
+class ZombieHorde {
+    public:
+        Zombie *z;
+        int n;
+        ZombieHorde(int n);
+        ~ZombieHorde( void ) {
+            delete [] z;
+        }
+        void announce( void ) const;
+};
 
-	std::cout << stack.name << std::endl;	
-	std::cout << heap->name << std::endl;	
-	delete(heap);
-	return (0);
-}
+#endif 

@@ -1,21 +1,31 @@
-#ifndef _PONY_HPP_
-# define _PONY_HPP_
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/22 15:45:15 by malaoui           #+#    #+#             */
+/*   Updated: 2021/05/22 15:45:16 by malaoui          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef __PONY_HPP__
+# define __PONY_HPP__
 
 #include <iostream>
 
 class Pony {
 
-    public:
+	public:
+		std::string		name;
+		int				age;
+		int 			height;
 
-        Pony( void );
-        ~Pony( void );
-
-        std::string name;
-        int         age;
-        std::string skin_color;
-        static Pony    ponyOnTheStack( void );
-        static Pony    *ponyOnTheHeap( void );
+		Pony( void );
+		~Pony( void );
+		static Pony		ponyOnTheStack( void );
+		static Pony		*ponyOnTheHeap( void );
 };
-
 
 #endif
