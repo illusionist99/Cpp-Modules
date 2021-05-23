@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 11:50:17 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 11:50:18 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:17:25 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,23 @@
 class HumanB {
 
     private:
+
         Weapon *w;
         std::string name;
 
     public:
+
         HumanB( std::string name ) : name(name) {
             std::cout << "Constructor Called" << std::endl;
         }
+
         ~HumanB( void ) {
             std::cout << "Destructor Called" << std::endl;
         }
-        void    attack( void ) {
-            std::cout << this->name << " attacks with his " << w->getType() << std::endl;
-        }
-        void setWeapon(Weapon & s) {
-            this->w = &s;
-        }
+
+        void    attack( void ) const;
+
+        void setWeapon(Weapon & s);
 };
 
 #endif

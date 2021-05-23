@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 11:50:30 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 11:50:31 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:11:33 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #define __BRAIN_HPP__
 
 #include <iostream>
-#include <sstream> //for std::stringstream 
-#include <string>  //for std::string
+#include <sstream>
 
 class Brain {
     public:
@@ -25,14 +24,8 @@ class Brain {
         ~Brain( void ) {
             std::cout << "Destructor Called" << std::endl;
         }
-        std::string identify( void ) const {
-            std::stringstream ss;
-            ss << this;  
-            return ss.str();
-        }
+        std::string identify( void ) const;
 };
-
-
 
 
 #endif

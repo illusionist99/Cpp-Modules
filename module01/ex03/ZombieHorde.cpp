@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 15:45:37 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 11:06:25 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:05:36 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,4 @@ void ZombieHorde::announce( void ) const {
     for(int i = 0; i < this->n; i++) {
         this->z[i].announce();
     }
-}
-
-int     main( void ) {
-
-    ZombieHorde kk(5);
-    kk.announce();
-    for( int i = 0; i < 5; i++) {
-        std::cout << kk.z[i].name << std::endl;
-    }
-    return 0;
 }

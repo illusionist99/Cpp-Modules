@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 11:43:55 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 11:43:56 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:22:54 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include <fstream>
 
-
-void    replace(char *filename, std::string s1, std::string s2);
+void    replace(std::string filename, std::string s1, std::string s2);
 
 #endif

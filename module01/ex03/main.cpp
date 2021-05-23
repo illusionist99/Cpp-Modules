@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 11:50:32 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 15:10:19 by malaoui          ###   ########.fr       */
+/*   Created: 2021/05/23 15:03:46 by malaoui           #+#    #+#             */
+/*   Updated: 2021/05/23 15:03:56 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "ZombieHorde.hpp"
 
-std::string     Human::identify( void ) {
+int     main( void ) {
 
-    std::string id =  this->f.identify();
-    return id;
+    ZombieHorde kk(5);
+    kk.announce();
+    for( int i = 0; i < 5; i++) {
+        std::cout << kk.z[i].name << std::endl;
+    }
+    return 0;
 }
-

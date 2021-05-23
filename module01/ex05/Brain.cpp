@@ -6,18 +6,16 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 11:50:27 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 11:50:28 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:11:19 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
 
+std::string             Brain::identify( void ) const {
 
-
-int main( void ) {
-
-    Brain c;
-    std::cout << c.identify() << std::endl;
-    return (0);
-} 
+    std::stringstream   ss;
+    ss << this;  
+    return ss.str();
+}
