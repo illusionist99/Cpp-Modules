@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 12:54:02 by malaoui           #+#    #+#             */
-/*   Updated: 2021/03/20 10:54:00 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 12:38:36 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void    upper(char **s, int nb_of_arguments)
     }
     std::cout << std::endl;  
 }
+
 int     main(int ac, char **av)
 {
     if (ac == 1)

@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 11:50:32 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 15:10:19 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 15:28:45 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 std::string     Human::identify( void ) {
 
-    std::string id =  this->f.identify();
+    std::string id = this->f.identify();
     return id;
 }
 
