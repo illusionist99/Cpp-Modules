@@ -6,7 +6,7 @@
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 15:45:37 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/22 15:45:38 by malaoui          ###   ########.fr       */
+/*   Updated: 2021/05/23 11:06:25 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ std::string random_name() {
     int         len;
     std::string c;
 
-    // srand(time(NULL));
     len = std::rand() % 11;
     if (len == 0)
         len = 5;
@@ -32,7 +31,6 @@ ZombieHorde::ZombieHorde(int n) {
 
     for(int i = 0; i < n; i++) {
         zombies[i].name = random_name();
-        // std::cout << zombies[i].name << std::endl;
     }
     this->z = zombies;
     this->n = n;

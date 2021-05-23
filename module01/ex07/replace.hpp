@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 11:50:37 by malaoui           #+#    #+#             */
-/*   Updated: 2021/05/23 11:50:38 by malaoui          ###   ########.fr       */
+/*   Created: 2021/05/23 11:43:55 by malaoui           #+#    #+#             */
+/*   Updated: 2021/05/23 11:43:56 by malaoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#ifndef __REPLACE_HPP__
+# define __REPLACE_HPP__
 
-int main()
-{
-    Human bob;
-    std::cout << bob.identify() << std::endl;
-    std::cout << bob.getBrain().identify() << std::endl;
-//  std::cout << bob.getBrain().identify() << std::endl;
-    return (0);
-}
+#include <iostream>
+#include <fstream>
+
+
+void    replace(char *filename, std::string s1, std::string s2);
+
+#endif
