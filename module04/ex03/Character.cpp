@@ -7,7 +7,8 @@
 Character::Character( std::string name)
 {
 	_name = name;
-	_slots = NULL;
+	*_slots = NULL;
+	_index = 0;
 }
 
 Character::Character( const Character & src )
@@ -51,13 +52,22 @@ std::string const & Character::getName() const {
 
 void Character::equip(AMateria* m) {
 
+	if (_index >= 0 && _index < 4) {
+	
+		_slots[_index] = m;
+		_index += 1;
+	}
 
 }
+
+
 void Character::unequip(int idx) {
 
-
+	_slots[idx] = NULL;
 }
+
 void Character::use(int idx, ICharacter& target) {
 
-
+	if (idx >= 0 && idx < 4)
+		_slots[idx]->use(target);
 }

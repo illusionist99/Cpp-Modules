@@ -15,7 +15,7 @@ class AMateria
 
 		AMateria( std::string const & type );
 		AMateria( AMateria const & src );
-		~AMateria();
+		virtual ~AMateria();
 
 		std::string const & getType() const;
 		unsigned int getXP() const ;

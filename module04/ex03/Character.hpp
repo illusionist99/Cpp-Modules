@@ -8,7 +8,9 @@
 class Character : public ICharacter
 {
 	std::string _name;
-	AMateria	*_slots;
+	AMateria	*_slots[4];
+	int			_index;
+
 	public:
 
 		Character( std::string name );

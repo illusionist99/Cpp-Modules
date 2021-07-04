@@ -42,14 +42,10 @@ std::ostream &			operator<<( std::ostream & o, MateriaSource const & i )
 }
 
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
+void MateriaSource::learnMateria(AMateria*) {
 
+}
 
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
+AMateria* MateriaSource::createMateria(std::string const & type) {
 
-
-/* ************************************************************************** */
+}
