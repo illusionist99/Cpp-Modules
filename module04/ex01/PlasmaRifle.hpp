@@ -1,22 +1,20 @@
-#ifndef PLASMARIFLE_HPP
-# define PLASMARIFLE_HPP
+#ifndef __PLASMARIFLE__HPP__
+#define __PLASMARIFLE__HPP__
 
-# include <iostream>
-# include <string>
-# include "AWeapon.hpp"
+
+#include "AWeapon.hpp"
+
+
 
 class PlasmaRifle : public AWeapon
 {
 
-	public:
 
+	public:
 		PlasmaRifle( void );
-		PlasmaRifle( PlasmaRifle const & src );
-		~PlasmaRifle();
-		void	attack() const;
-		PlasmaRifle &		operator=( PlasmaRifle const & rhs );
+		~PlasmaRifle( void );
+		void	attack( void ) const ;
 };
 
-std::ostream &			operator<<( std::ostream & o, PlasmaRifle const & i );
 
-#endif /* ***************************************************** PLASMARIFLE_H */
+#endif

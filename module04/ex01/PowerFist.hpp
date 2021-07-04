@@ -1,24 +1,19 @@
-#ifndef POWERFIST_HPP
-# define POWERFIST_HPP
+#ifndef __POWERFIST__HPP__
+#define __POWERFIST__HPP__
 
-# include <iostream>
-# include <string>
-# include "AWeapon.hpp"
 
-class PowerFist : public  AWeapon
+#include "AWeapon.hpp"
+
+
+class PowerFist : public AWeapon
 {
 
+
 	public:
-
-		PowerFist( void );
-		PowerFist( PowerFist const & src );
+		PowerFist();
 		~PowerFist( void );
-		void	 attack( void ) const;
-		PowerFist &		operator=( PowerFist const & rhs );
-
-
+		void	attack( void ) const;
 };
 
-std::ostream &			operator<<( std::ostream & o, PowerFist const & i );
 
-#endif /* ******************************************************* POWERFIST_H */
+#endif

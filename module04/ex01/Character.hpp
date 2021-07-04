@@ -1,24 +1,26 @@
-#ifndef CHARACTER_HPP
-# define CHARACTER_HPP
+#pragma once
 
-# include <iostream>
-# include <string>
+#include "AWeapon.hpp"
+#include "Enemy.hpp"
 
 class Character
 {
+    private:
 
-	public:
+        std::string _name;
+        int         _ap;
+        AWeapon     *_p;
+    
+    public:
+        Character(std::string const & name);
+        ~Character();
 
-		Character();
-		Character( Character const & src );
-		~Character();
-
-		Character &		operator=( Character const & rhs );
-
-	private:
-
+        void recoverAP();
+        void equip(AWeapon*);
+        void attack(Enemy*);
+        std::string getName() const;
+        AWeapon *getWeapon() const;
+        int     getAP() const ;
 };
 
-std::ostream &			operator<<( std::ostream & o, Character const & i );
-
-#endif /* ******************************************************* CHARACTER_H */
+std::ostream& operator<<(std::ostream& os, const Character& obj);

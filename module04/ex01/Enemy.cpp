@@ -1,56 +1,31 @@
 #include "Enemy.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
+Enemy::Enemy( int hp, std::string const & type) {
 
-Enemy::Enemy( int hp, std::string const & type )
-{
-	
+	_hp = hp;
+	_type = type;
+
 }
 
-Enemy::Enemy( const Enemy & src )
-{
+Enemy::~Enemy() {
 }
 
+std::string Enemy::getType() const {
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
-Enemy::~Enemy()
-{
+	return _type;
 }
 
+int Enemy::getHP() const {
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-Enemy &				Enemy::operator=( Enemy const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+	return _hp;
 }
 
-std::ostream &			operator<<( std::ostream & o, Enemy const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
+void	Enemy::takeDamage( int damage ) {
+
+
+	if (damage <= 0)
+		return ;
+	_hp -= damage;
+	if (_hp < 0)
+		_hp = 0;
 }
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

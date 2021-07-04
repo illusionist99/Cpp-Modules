@@ -1,55 +1,63 @@
 #include "Character.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
-Character::Character()
-{
+Character::Character(std::string const & name) {
+
+    _name = name;
+    _ap = 40;
+    _p = NULL;
 }
 
-Character::Character( const Character & src )
-{
+Character::~Character( void ) {
+
+
+}
+int     Character::getAP() const  {
+
+    return _ap;
 }
 
+void Character::recoverAP() {
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
-Character::~Character()
-{
+    if (_ap < 40)
+        _ap += 10;
+    if (_ap > 40)
+        _ap = 40;
 }
 
+void Character::equip(AWeapon *w) {
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-Character &				Character::operator=( Character const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+    _p = w;
 }
 
-std::ostream &			operator<<( std::ostream & o, Character const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
+void Character::attack(Enemy *e) {
+
+    if (_p != NULL && _ap > _p->getAPCost()) {
+
+        std::cout << _name << " attacks " << e->getType() << " with a " << _p->getName() << std::endl;
+        _p->attack();
+        e->takeDamage(_p->getDamage());
+        _ap -= _p->getAPCost();
+        if (e->getHP() == 0)
+            e->~Enemy();
+    }
 }
 
+AWeapon *Character::getWeapon() const {
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
+    return _p;
+}
 
+std::ostream& operator<<(std::ostream& os, const Character& obj)
+{
+    if (obj.getWeapon() != NULL)
+        os << obj.getName() << " has " << obj.getAP() << " AP and wield a " << obj.getWeapon()->getName() << std::endl;
+    else
+        os << obj.getName() << " has " << obj.getAP() << " AP and is unarmed" << std::endl;
+    return os;
+}
 
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
+std::string Character::getName() const {
 
-
-/* ************************************************************************** */
+    return _name;
+}

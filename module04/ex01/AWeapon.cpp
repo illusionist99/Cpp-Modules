@@ -1,75 +1,32 @@
 #include "AWeapon.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
+AWeapon::AWeapon( std::string const & name, int apcost, int damage)  {
 
-AWeapon::AWeapon( std::string const & name, int apcost, int damage )
-{
-	this->_name = name;
-	this->_apcost = apcost;
-	this->_damage = damage;
-	std::cout << "Default Constructor" << std::endl;
-}
+	_name = name;
+	_damage_points = damage;
+	_ap_cost = apcost;
 
-AWeapon::AWeapon( const AWeapon & src )
-{
-	this->_name = src._name;
-	this->_apcost = src._apcost;
-	this->_damage = src._damage;
-	std::cout << "Copy Constructor" << std::endl;
 }
 
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
+std::string AWeapon::getName() const {
 
-AWeapon::~AWeapon( void )
-{
-	std::cout << "Destructor" << std::endl;
+	return _name;
+}
+
+int 	AWeapon::getAPCost() const {
+
+	return _ap_cost;
+}
+
+int		AWeapon::getDamage() const {
+
+	return _damage_points;
+
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
+AWeapon::~AWeapon() {
 
-AWeapon &				AWeapon::operator=( AWeapon const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+
 }
-
-std::ostream &			operator<<( std::ostream & o, AWeapon const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
-
-std::string		AWeapon::getName( void ) const {
-
-	return (this->_name);
-}
-
-int				AWeapon::getAPCost( void ) const {
-
-	return (this->_apcost);
-}
-
-int				AWeapon::getDamage( void ) const {
-
-	return (this->_damage);
-}
-
-void			AWeapon::attack( void ) const {
-
-	std::cout << "Sound and Lighting Effects " << std::endl;
-}
-
-
-/* ************************************************************************** */

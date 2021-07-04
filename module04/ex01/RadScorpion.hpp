@@ -1,24 +1,16 @@
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
+#ifndef __RADSCORPION_HPP__
+# define __RADSCORPION_HPP__
 
-# include <iostream>
-# include <string>
+#include "Enemy.hpp"
 
-class RadScorpion
+class   RadScorpion :  public Enemy
 {
 
-	public:
-
-		RadScorpion();
-		RadScorpion( RadScorpion const & src );
-		~RadScorpion();
-
-		RadScorpion &		operator=( RadScorpion const & rhs );
-
-	private:
-
+    public:
+        RadScorpion();
+        ~RadScorpion( void );
+        void takeDamage( int );
 };
 
-std::ostream &			operator<<( std::ostream & o, RadScorpion const & i );
 
-#endif /* ***************************************************** RADSCORPION_H */
+#endif

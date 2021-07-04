@@ -1,41 +1,28 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 19:11:22 by malaoui           #+#    #+#             */
-/*   Updated: 2021/06/05 19:11:23 by malaoui          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef __VICTM_HPP__
 
-#ifndef VICTIM_HPP
-# define VICTIM_HPP
+# define __VICTM_HPP__
 
-# include <iostream>
-# include <string>
+
+#include <iostream>
+#include <string>
+
 
 class Victim
 {
 
-	public:
+protected:
+	std::string _name;
+	Victim();
 
-		Victim( std::string name );
-		Victim( Victim const & src );
-		~Victim( void );
+public:
 
-		Victim &		operator=( Victim const & rhs );
-
-		void			setName( std::string name);
-		std::string 	getName( void ) const ;
-		virtual void			getPolymorphed() const;
-	
-	protected:
-		std::string _name;
+	Victim( std::string name);
+	~Victim();
+	std::string getName( void ) const ;
+	void	getPolymorphed( void ) const;
 
 };
 
-std::ostream &			operator<<( std::ostream & o, Victim const & i );
+std::ostream& operator<<(std::ostream& os, const Victim& dt);
 
 #endif

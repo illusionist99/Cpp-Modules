@@ -1,55 +1,25 @@
 #include "RadScorpion.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
-RadScorpion::RadScorpion()
-{
-}
 
-RadScorpion::RadScorpion( const RadScorpion & src )
-{
+RadScorpion::RadScorpion( void ) : Enemy(80, "RadScorpion" ) {
+
+    std::cout << "* click click click *" << std::endl;
 }
 
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
+RadScorpion::~RadScorpion( void ) {
 
-RadScorpion::~RadScorpion()
-{
+    std::cout << "* SPROTCH *" << std::endl;
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
+void	RadScorpion::takeDamage( int damage ) {
 
-RadScorpion &				RadScorpion::operator=( RadScorpion const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+
+	if (damage <= 3)
+		return ;
+	_hp -= damage - 3;
+	if (_hp < 0)
+		_hp = 0;
 }
-
-std::ostream &			operator<<( std::ostream & o, RadScorpion const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

@@ -1,55 +1,25 @@
 #include "SuperMutant.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
-SuperMutant::SuperMutant()
-{
-}
 
-SuperMutant::SuperMutant( const SuperMutant & src )
-{
+SuperMutant::SuperMutant( void ) : Enemy(170, "Super Mutant" ) {
+
+    std::cout << "Gaaah. Me want smash heads!" << std::endl;
 }
 
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
+SuperMutant::~SuperMutant( void ) {
 
-SuperMutant::~SuperMutant()
-{
+    std::cout << "Aaargh..." << std::endl;
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
+void	SuperMutant::takeDamage( int damage ) {
 
-SuperMutant &				SuperMutant::operator=( SuperMutant const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+
+	if (damage <= 3)
+		return ;
+	_hp -= damage - 3;
+	if (_hp < 0)
+		_hp = 0;
 }
-
-std::ostream &			operator<<( std::ostream & o, SuperMutant const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

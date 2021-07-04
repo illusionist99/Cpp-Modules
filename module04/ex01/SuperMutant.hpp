@@ -1,24 +1,15 @@
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef __SUPERMUTANT_HPP__
+# define  __SUPERMUTANT_HPP__
 
-# include <iostream>
-# include <string>
+#include "Enemy.hpp"
 
-class SuperMutant
+class   SuperMutant :  public Enemy
 {
 
-	public:
-
-		SuperMutant();
-		SuperMutant( SuperMutant const & src );
-		~SuperMutant();
-
-		SuperMutant &		operator=( SuperMutant const & rhs );
-
-	private:
-
+    public:
+        SuperMutant();
+        ~SuperMutant( void );
+        void takeDamage( int );
 };
 
-std::ostream &			operator<<( std::ostream & o, SuperMutant const & i );
-
-#endif /* ***************************************************** SUPERMUTANT_H */
+#endif

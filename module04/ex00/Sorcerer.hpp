@@ -1,45 +1,36 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Sorcerer.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 19:11:30 by malaoui           #+#    #+#             */
-/*   Updated: 2021/06/05 19:11:31 by malaoui          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef __SORCERER_HPP__
+# define __SORCERER_HPP__
 
-#ifndef SORCERER_HPP
-# define SORCERER_HPP
 
-# include <iostream>
-# include <string>
-# include "Victim.hpp"
+#include <iostream>
+#include <string>
+
+#include "Victim.hpp"
+#include "Peon.hpp"
+#include "Dog.hpp"
 
 class Sorcerer
 {
 
-	public:
+	Sorcerer( void );
+	std::string _name;
+	std::string _title;
 
-		Sorcerer( std::string name, std::string title);
-		Sorcerer( Sorcerer const & src );
-		~Sorcerer( void );
+public:
 
-		Sorcerer &		operator=( Sorcerer const & rhs );
+	std::string getName() const;
+	std::string getTitle() const;
+	Sorcerer(std::string name, std::string title );
+	void	polymorph( Peon const & ) const;
+	void	polymorph( Victim const & ) const;
+	void	polymorph( Dog const & ) const;
 
-		std::string 	getName( void ) const ;
-		std::string 	getTitle( void ) const ;
-
-		void			setTitle( std::string title );
-		void			setName( std::string name );
-		void			polymorph(Victim const &) const;
-	private:
-
-		std::string _name;
-		std::string _title;
+	~Sorcerer( void );
+	
 };
 
-std::ostream &			operator<<( std::ostream & o, Sorcerer const & i );
+
+std::ostream& operator<<(std::ostream& os, const Sorcerer& dt);
+
 
 #endif
