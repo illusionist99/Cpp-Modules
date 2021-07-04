@@ -1,8 +1,5 @@
 #include "Ice.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 Ice::Ice( void ) : AMateria("ice")
 {
@@ -13,18 +10,12 @@ Ice::Ice( void ) : AMateria("ice")
 // }
 
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Ice::~Ice()
 {
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 Ice &				Ice::operator=( Ice const & rhs )
 {
@@ -42,14 +33,11 @@ std::ostream &			operator<<( std::ostream & o, Ice const & i )
 }
 
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
+AMateria* Ice::clone() const {
 
+}
 
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
+void Ice::use(ICharacter & target) {
 
-
-/* ************************************************************************** */
+	std::cout << "* shoots an ice bolt at " << target.getName() << std::endl;
+}

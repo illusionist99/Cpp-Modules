@@ -4,8 +4,10 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Character::Character()
+Character::Character( std::string name)
 {
+	_name = name;
+	_slots = NULL;
 }
 
 Character::Character( const Character & src )
@@ -42,14 +44,20 @@ std::ostream &			operator<<( std::ostream & o, Character const & i )
 }
 
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
+std::string const & Character::getName() const {
+
+	return _name;
+}
+
+void Character::equip(AMateria* m) {
 
 
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
+}
+void Character::unequip(int idx) {
 
 
-/* ************************************************************************** */
+}
+void Character::use(int idx, ICharacter& target) {
+
+
+}

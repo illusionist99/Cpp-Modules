@@ -1,8 +1,5 @@
 #include "AMateria.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 AMateria::AMateria( std::string const & type )
 {
@@ -10,23 +7,27 @@ AMateria::AMateria( std::string const & type )
 	_xp = 0;
 }
 
-AMateria::AMateria( const AMateria & src )
-{
-}
+// AMateria::AMateria( const AMateria & src )
+// {
+// }
 
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 AMateria::~AMateria()
 {
+
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
+std::string const & AMateria::getType() const {
+
+	return _type;
+}
+
+unsigned int AMateria::getXP() const {
+
+	return _xp;
+}
 
 AMateria &				AMateria::operator=( AMateria const & rhs )
 {

@@ -13,13 +13,13 @@ class Cure : public AMateria
 		Cure();
 		Cure( Cure const & src );
 		~Cure();
-		
-		Cure &		operator=( Cure const & rhs );
 
-	private:
+		Cure &		operator=( Cure const & rhs );
+		AMateria* clone() const;
+		void use(ICharacter & target);
 
 };
 
 std::ostream &			operator<<( std::ostream & o, Cure const & i );
 
-#endif /* ************************************************************ CURE_H */
+#endif

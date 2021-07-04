@@ -17,8 +17,8 @@ class AMateria
 		AMateria( AMateria const & src );
 		~AMateria();
 
-		std::string const & getType() const; // Returns the materia type
-		unsigned int getXP() const ; // Returns the Materia's XP
+		std::string const & getType() const;
+		unsigned int getXP() const ;
 		AMateria &		operator=( AMateria const & rhs );
 
 		virtual AMateria* clone() const = 0;

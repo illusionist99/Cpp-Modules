@@ -1,8 +1,6 @@
 #include "Cure.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
+
 
 Cure::Cure() : AMateria("cure")
 {
@@ -13,18 +11,11 @@ Cure::Cure() : AMateria("cure")
 // }
 
 
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Cure::~Cure()
 {
 }
 
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 Cure &				Cure::operator=( Cure const & rhs )
 {
@@ -41,15 +32,13 @@ std::ostream &			operator<<( std::ostream & o, Cure const & i )
 	return o;
 }
 
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
+AMateria* Cure::clone( void ) const {
 
 
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
+}
 
+void Cure::use(ICharacter & target) {
 
-/* ************************************************************************** */
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+
+}
