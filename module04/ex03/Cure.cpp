@@ -34,7 +34,8 @@ std::ostream &			operator<<( std::ostream & o, Cure const & i )
 
 AMateria* Cure::clone( void ) const {
 
-
+	AMateria *n =  new Cure();
+	return n;
 }
 
 void Cure::use(ICharacter & target) {

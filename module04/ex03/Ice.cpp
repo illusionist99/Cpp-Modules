@@ -35,6 +35,8 @@ std::ostream &			operator<<( std::ostream & o, Ice const & i )
 
 AMateria* Ice::clone() const {
 
+	AMateria *n = new Ice();
+	return n;
 }
 
 void Ice::use(ICharacter & target) {
