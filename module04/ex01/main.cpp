@@ -4,6 +4,9 @@
 #include "PowerFist.hpp"
 #include "RadScorpion.hpp"
 
+#include "Ak47.hpp"
+#include "Aug.hpp"
+
 int main()
 {
     Character* me = new Character("me");
@@ -11,6 +14,8 @@ int main()
     Enemy* b = new RadScorpion();
     AWeapon* pr = new PlasmaRifle();
     AWeapon* pf = new PowerFist();
+    AWeapon* ak = new Ak47();
+    AWeapon* aug = new Aug();
     me->equip(pr);
     std::cout << *me;
     me->equip(pf);
@@ -21,6 +26,10 @@ int main()
     me->attack(b);
     std::cout << *me;
     me->attack(b);
+    std::cout << *me;
+    me->equip(ak);
+    std::cout << *me;
+    me->equip(aug);
     std::cout << *me;
     return 0;
 }

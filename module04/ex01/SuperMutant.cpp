@@ -2,7 +2,7 @@
 
 
 
-SuperMutant::SuperMutant( void ) : Enemy(170, "Super Mutant" ) {
+SuperMutant::SuperMutant( void ) : Enemy( 170, "Super Mutant" ) {
 
     std::cout << "Gaaah. Me want smash heads!" << std::endl;
 }

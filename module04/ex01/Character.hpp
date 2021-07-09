@@ -19,11 +19,11 @@ class Character
         Character operator=(const Character & h);
 
         void recoverAP();
-        void equip(AWeapon*);
+        void equip(AWeapon *);
         void attack(Enemy*);
         std::string getName() const;
-        AWeapon *getWeapon() const;
-        int     getAP() const ;
+        AWeapon     *getWeapon() const;
+        int         getAP() const ;
 };
 
 std::ostream& operator<<(std::ostream& os, const Character& obj);
