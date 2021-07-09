@@ -37,7 +37,7 @@ AWeapon::AWeapon(const AWeapon & h) {
 	_ap_cost = h.getAPCost();
 }
 
-AWeapon AWeapon::operator=(const AWeapon & h) {
+AWeapon& AWeapon::operator=(const AWeapon & h) {
 
 	_name = h.getName();
 	_damage_points = h.getDamage();

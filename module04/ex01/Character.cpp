@@ -63,17 +63,19 @@ std::string Character::getName() const {
 }
 
 
-Character(const Character & h) {
+Character::Character(const Character & h) {
 
     _name = h.getName();
     _ap = h.getAP();
     _p = getWeapon();
 }
 
-Character operator=(const Character & h) {
+Character Character::operator=(const Character & h) {
 
     _name = h.getName();
     _ap = h.getAP();
     _p = getWeapon();
+
+    return (*this);
 }
 

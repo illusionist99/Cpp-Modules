@@ -22,7 +22,7 @@ public:
 	int		getDamage() const;
 
 	AWeapon(const AWeapon & h);
-	AWeapon operator=(const AWeapon & h);
+	AWeapon &operator=(const AWeapon & h);
 	virtual void attack() const = 0;
 
 };

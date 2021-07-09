@@ -9,6 +9,9 @@ class   SuperMutant :  public Enemy
     public:
         SuperMutant();
         ~SuperMutant( void );
+
+        SuperMutant( const SuperMutant & h);
+        //SuperMutant &operator=(const SuperMutant & h);
         void takeDamage( int );
 };
 

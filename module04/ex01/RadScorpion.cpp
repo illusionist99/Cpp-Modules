@@ -23,3 +23,14 @@ void	RadScorpion::takeDamage( int damage ) {
 	if (_hp < 0)
 		_hp = 0;
 }
+
+// RadScorpion &RadScorpion::operator=(const RadScorpion & h) {
+
+// 	*this = h;
+// 	return (*this);
+// }
+
+RadScorpion::RadScorpion(const RadScorpion & h) : Enemy( h ) {
+
+	*this = h;
+}

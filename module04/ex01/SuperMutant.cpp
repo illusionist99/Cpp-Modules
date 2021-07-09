@@ -23,3 +23,14 @@ void	SuperMutant::takeDamage( int damage ) {
 	if (_hp < 0)
 		_hp = 0;
 }
+
+SuperMutant::SuperMutant( const SuperMutant & h) : Enemy( h ) {
+
+	*this = h;
+}
+
+// SuperMutant &SuperMutant::operator=(const SuperMutant & h)  {
+
+// 	*this = h;
+// 	return (*this);
+// }
