@@ -16,7 +16,7 @@ public:
 	Pig operator=( const Pig & h);
 
 	void	getPolymorphed( void ) const;
-	~Pig( void );
+	virtual ~Pig( void );
 
 };
 

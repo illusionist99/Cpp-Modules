@@ -21,14 +21,15 @@ class Squad : public ISquad
 		Squad();
 		Squad( Squad const & src );
 		~Squad();
-		int getCount( void ) const;
-		ISpaceMarine* getUnit( int ) const;
+
+		int				getCount( void ) const;
+		ISpaceMarine* 	getUnit( int ) const;
+		int				push(ISpaceMarine *u);
+
 		Squad &		operator=( Squad const & rhs );
-		int		push(ISpaceMarine *u);
+
 	private:
 		int _count;
 		t_unit *_unit;
 };
-
-std::ostream &			operator<<( std::ostream & o, Squad const & i );
 

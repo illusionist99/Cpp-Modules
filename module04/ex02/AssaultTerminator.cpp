@@ -1,8 +1,5 @@
 #include "AssaultTerminator.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 AssaultTerminator::AssaultTerminator()
 {
@@ -11,36 +8,20 @@ AssaultTerminator::AssaultTerminator()
 
 AssaultTerminator::AssaultTerminator( const AssaultTerminator & src )
 {
+	if ( this != &src )
+		_marine = src.clone();
 }
-
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 AssaultTerminator::~AssaultTerminator()
 {
 	std::cout << "I’ll be back..." << std::endl;
 }
 
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-AssaultTerminator &				AssaultTerminator::operator=( AssaultTerminator const & rhs )
+AssaultTerminator &	AssaultTerminator::operator=( AssaultTerminator const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+		_marine = rhs.clone();
 	return *this;
-}
-
-std::ostream &			operator<<( std::ostream & o, AssaultTerminator const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
 }
 
 

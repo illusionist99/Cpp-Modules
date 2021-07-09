@@ -34,16 +34,16 @@ void	Sorcerer::polymorph( Victim const & v) const {
 }
 
 
-void	Sorcerer::polymorph( Dog const & v) const {
+// void	Sorcerer::polymorph( Dog const & v) const {
 
-	v.getPolymorphed();
-}
+// 	v.getPolymorphed();
+// }
 
 
-void	Sorcerer::polymorph( Peon const & v) const {
+// void	Sorcerer::polymorph( Peon const & v) const {
 
-	v.getPolymorphed();
-}
+// 	v.getPolymorphed();
+// }
 
 Sorcerer::~Sorcerer( void ) {
 
@@ -67,7 +67,7 @@ Sorcerer Sorcerer::operator=( const Sorcerer & h ) {
 	return (*this);
 }
 
-void	Sorcerer::polymorph( Pig const &v ) const {
+// void	Sorcerer::polymorph( Pig const &v ) const {
 
-	v.getPolymorphed();
-}
+// 	v.getPolymorphed();
+// }

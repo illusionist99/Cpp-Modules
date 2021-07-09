@@ -15,7 +15,7 @@ public:
 	Dog( const Dog & dpg);
 	Dog operator=( const Dog & dpg);
 	void	getPolymorphed( void ) const;
-	~Dog( void );
+	virtual ~Dog( void );
 
 };
 

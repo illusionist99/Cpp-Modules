@@ -20,10 +20,11 @@ class AssaultTerminator : public ISpaceMarine
 		void	meleeAttack() const;
 		void	battleCry() const;
 		ISpaceMarine* clone() const;
+
 	private:
 		ISpaceMarine *_marine;
 };
 
 std::ostream &			operator<<( std::ostream & o, AssaultTerminator const & i );
 
-#endif /* *********************************************** ASSAULTTERMINATOR_H */
+#endif

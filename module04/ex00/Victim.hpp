@@ -17,7 +17,7 @@ class Victim
 	public:
 
 		Victim( std::string name);
-		~Victim();
+		virtual ~Victim();
 		Victim( const Victim & h);
 		std::string getName( void ) const ;
 		void	getPolymorphed( void ) const;

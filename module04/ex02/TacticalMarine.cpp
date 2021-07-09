@@ -11,12 +11,9 @@ TacticalMarine::TacticalMarine()
 
 TacticalMarine::TacticalMarine( const TacticalMarine & src )
 {
+	if (this != &src)
+		_marine = src.clone();
 }
-
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 TacticalMarine::~TacticalMarine()
 {
@@ -24,24 +21,14 @@ TacticalMarine::~TacticalMarine()
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 TacticalMarine &				TacticalMarine::operator=( TacticalMarine const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+		_marine = rhs.clone();
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, TacticalMarine const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
 
 
 void	TacticalMarine::battleCry() const {

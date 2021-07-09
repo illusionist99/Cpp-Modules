@@ -3,7 +3,7 @@
 
 # include <iostream>
 # include <string>
-#include "ISpaceMarine.hpp"
+# include "ISpaceMarine.hpp"
 
 class TacticalMarine : public ISpaceMarine
 {
@@ -14,7 +14,7 @@ class TacticalMarine : public ISpaceMarine
 		TacticalMarine( TacticalMarine const & src );
 		~TacticalMarine();
 
-		TacticalMarine &		operator=( TacticalMarine const & rhs );
+		TacticalMarine &operator=( TacticalMarine const & rhs );
 		void	rangedAttack() const;
 		void	meleeAttack() const;
 		void	battleCry() const;
@@ -23,6 +23,4 @@ class TacticalMarine : public ISpaceMarine
 		ISpaceMarine *_marine;
 };
 
-std::ostream &			operator<<( std::ostream & o, TacticalMarine const & i );
-
-#endif /* ************************************************** TACTICALMARINE_H */
+#endif

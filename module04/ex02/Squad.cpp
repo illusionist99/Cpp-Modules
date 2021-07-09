@@ -4,21 +4,49 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
+ISpaceMarine* Squad::getUnit(int n) const {
+
+	int count;
+	t_unit *a;
+
+	a = _unit;
+	count = 0;
+	while (a != NULL && count != n)
+	{
+		count++;
+		a = a->next;
+	}
+	return (a->unit);
+}
+
 Squad::Squad()
 {
 	_unit = NULL;
-
-	
+	_count = 0;
 }
 
 Squad::Squad( const Squad & src )
 {
+	int i;
+
+	i = 0;
+	if (_count != 0) {
+
+		while (_unit != NULL)
+		{
+			delete _unit->unit;
+			_unit = _unit->next;
+		}
+		_unit = NULL;
+	}
+	_count = src.getCount();
+	while (i < _count) {
+	
+		this->push(src.getUnit(i));
+		i++;
+	}
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Squad::~Squad()
 {
@@ -27,30 +55,31 @@ Squad::~Squad()
 		delete _unit->unit;
 		_unit = _unit->next;
 	}
-	
 }
 
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 Squad &				Squad::operator=( Squad const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	int i;
+
+	i = 0;
+	if (_count != 0) {
+
+		while (_unit != NULL)
+		{
+			delete _unit->unit;
+			_unit = _unit->next;
+		}
+		_unit = NULL;
+	}
+	_count = rhs.getCount();
+	while (i < _count) {
+	
+		this->push(rhs.getUnit(i));
+		i++;
+	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, Squad const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
-
 
 int Squad::getCount() const {
 
@@ -67,20 +96,6 @@ int Squad::getCount() const {
 	return (count);
 }
 
-ISpaceMarine* Squad::getUnit(int n) const {
-
-	int count;
-	t_unit *a;
-
-	a = _unit;
-	count = 0;
-	while (a != NULL && count != n)
-	{
-		count++;
-		a = a->next;
-	}
-	return (a->unit);
-}
 
 int		Squad::push(ISpaceMarine *u) {
 
