@@ -10,17 +10,18 @@
 class Victim
 {
 
-protected:
-	std::string _name;
-	Victim();
+		Victim( void );
+	protected:
+		std::string _name;
 
-public:
+	public:
 
-	Victim( std::string name);
-	~Victim();
-	std::string getName( void ) const ;
-	void	getPolymorphed( void ) const;
-
+		Victim( std::string name);
+		~Victim();
+		Victim( const Victim & h);
+		std::string getName( void ) const ;
+		void	getPolymorphed( void ) const;
+		Victim operator=(const Victim & h);
 };
 
 std::ostream& operator<<(std::ostream& os, const Victim& dt);

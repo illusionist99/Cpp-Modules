@@ -22,6 +22,17 @@ std::ostream& operator<<(std::ostream& os, const Victim& dt) {
 	return os;
 }
 
+Victim::Victim( const Victim & h) {
+
+	_name = h.getName();
+}
+
+Victim 	Victim::operator=(const Victim & h) {
+
+	_name = h.getName();
+	return (*this);
+}
+
 void	Victim::getPolymorphed( void ) const {
 
 	std::cout << this->_name << "  has been turned into a cute little sheep!" << std::endl;

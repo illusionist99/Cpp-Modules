@@ -11,11 +11,13 @@ class Peon : public Victim
 public:
 
 	Peon( std::string name );
-	
+
+	Peon( const Peon & h);
+	Peon operator=( const Peon & h);
+
 	void	getPolymorphed( void ) const;
 	~Peon( void );
 
 };
-
 
 #endif

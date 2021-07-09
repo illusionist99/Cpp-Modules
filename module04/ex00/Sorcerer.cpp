@@ -47,6 +47,27 @@ void	Sorcerer::polymorph( Peon const & v) const {
 
 Sorcerer::~Sorcerer( void ) {
 
-	std::cout << this->_name << ", " << this->_title << \
+	std::cout << this->_name << ", " << this->_title <<
 	", is dead. Consequences will never be the same!" << std::endl;
+}
+
+
+
+Sorcerer::Sorcerer( const Sorcerer & h ) {
+
+	_name = h.getName();
+	_title = h.getTitle();
+
+}
+
+Sorcerer Sorcerer::operator=( const Sorcerer & h ) {
+
+	_name = h.getName();
+	_title = h.getTitle();
+	return (*this);
+}
+
+void	Sorcerer::polymorph( Pig const &v ) const {
+
+	v.getPolymorphed();
 }

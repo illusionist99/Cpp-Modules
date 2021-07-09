@@ -29,3 +29,17 @@ void	Enemy::takeDamage( int damage ) {
 	if (_hp < 0)
 		_hp = 0;
 }
+
+Enemy Enemy::operator=(const Enemy & h) {
+
+	_hp = h.getHP();
+	_type = h.getType();
+
+	return (*this);	
+}
+
+Enemy::Enemy(const Enemy & h) {
+
+	_hp = h.getHP();
+	_type = h.getType();	
+}

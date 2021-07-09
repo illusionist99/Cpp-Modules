@@ -1,29 +1,18 @@
 #include "Sorcerer.hpp"
 
-// int	main(int argc, char const *argv[])
-// {
-// 	Sorcerer	khona("", "");
-// 	Victim 		v("l");
-// 	Peon 		b("f");
-// 	Dog			n("snoop");
-
-// //	std::cout << khona;
-// 	khona.polymorph(v);
-// 	khona.polymorph(b);
-// 	khona.polymorph(n);
-// 	return (0);
-// }
-
 int main()
 {
 	Sorcerer robert("Robert", "the Magnificent");
 	Victim jim("Jimmy");
 	Peon joe("Joe");
-	
-	std::cout << robert << jim << joe;
-	
+	Dog	snoop("snoop");
+	Pig biggy("biggy");
+
+
+	std::cout << robert << jim << joe << snoop << biggy;
 	robert.polymorph(jim);
 	robert.polymorph(joe);
-	
+	robert.polymorph(snoop);
+	robert.polymorph(biggy);
 	return 0;
 }

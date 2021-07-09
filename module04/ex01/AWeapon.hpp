@@ -15,15 +15,16 @@ protected:
 	int		_ap_cost;
 
 public:
-	AWeapon( std::string const & namem, int apcost, int damage);
+	AWeapon( std::string const & name, int apcost, int damage);
 	virtual ~AWeapon( void );
 	std::string getName() const;
 	int 	getAPCost() const;
 	int		getDamage() const;
 
+	AWeapon(const AWeapon & h);
+	AWeapon operator=(const AWeapon & h);
 	virtual void attack() const = 0;
 
-	
 };
 
 #endif

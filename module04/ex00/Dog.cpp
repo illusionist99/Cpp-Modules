@@ -14,5 +14,16 @@ Dog::~Dog( void ) {
 
 void	Dog::getPolymorphed( void ) const {
 
-	std::cout << this->_name << " has been turned into Snoop!" << std::endl;
+	std::cout << this->_name << " has been turned into white pony!" << std::endl;
+}
+
+Dog Dog::operator=( const Dog & dpg) {
+
+	_name = dpg.getName();
+	return (*this);
+}
+
+Dog::Dog( const Dog & dpg) : Victim( dpg ) {
+
+	_name = dpg.getName();
 }

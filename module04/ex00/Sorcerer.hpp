@@ -8,6 +8,7 @@
 #include "Victim.hpp"
 #include "Peon.hpp"
 #include "Dog.hpp"
+#include "Pig.hpp"
 
 class Sorcerer
 {
@@ -20,10 +21,16 @@ public:
 
 	std::string getName() const;
 	std::string getTitle() const;
-	Sorcerer(std::string name, std::string title );
+	
+	Sorcerer( std::string name, std::string title );
+
+	Sorcerer( const Sorcerer & h );
+	Sorcerer operator=( const Sorcerer & h );
+	
 	void	polymorph( Peon const & ) const;
 	void	polymorph( Victim const & ) const;
 	void	polymorph( Dog const & ) const;
+	void	polymorph( Pig const & ) const;
 
 	~Sorcerer( void );
 	

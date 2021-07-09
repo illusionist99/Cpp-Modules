@@ -11,7 +11,9 @@ class Dog : public Victim
 public:
 
 	Dog( std::string name );
-	
+
+	Dog( const Dog & dpg);
+	Dog operator=( const Dog & dpg);
 	void	getPolymorphed( void ) const;
 	~Dog( void );
 

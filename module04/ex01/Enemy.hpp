@@ -19,6 +19,9 @@ class Enemy
 		std::string getType() const;
 		int getHP() const;
 
+		Enemy operator=(const Enemy & h);
+		Enemy(const Enemy & h);
+
 		virtual void takeDamage( int );
 };
 

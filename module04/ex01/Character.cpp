@@ -61,3 +61,19 @@ std::string Character::getName() const {
 
     return _name;
 }
+
+
+Character(const Character & h) {
+
+    _name = h.getName();
+    _ap = h.getAP();
+    _p = getWeapon();
+}
+
+Character operator=(const Character & h) {
+
+    _name = h.getName();
+    _ap = h.getAP();
+    _p = getWeapon();
+}
+

@@ -15,6 +15,9 @@ class Character
         Character(std::string const & name);
         ~Character();
 
+        Character(const Character & h);
+        Character operator=(const Character & h);
+
         void recoverAP();
         void equip(AWeapon*);
         void attack(Enemy*);

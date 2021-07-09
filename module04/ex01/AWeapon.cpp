@@ -5,7 +5,6 @@ AWeapon::AWeapon( std::string const & name, int apcost, int damage)  {
 	_name = name;
 	_damage_points = damage;
 	_ap_cost = apcost;
-
 }
 
 
@@ -29,4 +28,20 @@ int		AWeapon::getDamage() const {
 AWeapon::~AWeapon() {
 
 
+}
+
+AWeapon::AWeapon(const AWeapon & h) {
+
+	_name = h.getName();
+	_damage_points = h.getDamage();
+	_ap_cost = h.getAPCost();
+}
+
+AWeapon AWeapon::operator=(const AWeapon & h) {
+
+	_name = h.getName();
+	_damage_points = h.getDamage();
+	_ap_cost = h.getAPCost();
+
+	return (*this);
 }
