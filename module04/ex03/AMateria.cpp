@@ -31,18 +31,11 @@ unsigned int AMateria::getXP() const {
 
 AMateria &				AMateria::operator=( AMateria const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	_xp = rhs.getXP();
+	_type = rhs.getType();
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, AMateria const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
 
 
 void		AMateria::use(ICharacter & target) {

@@ -1,5 +1,5 @@
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef __AMATERIA_HPP__
+# define __AMATERIA_HPP__
 
 # include <iostream>
 # include <string>
@@ -23,9 +23,8 @@ class AMateria
 
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter & target);
-
 };
 
 std::ostream &			operator<<( std::ostream & o, AMateria const & i );
 
-#endif 
+#endif

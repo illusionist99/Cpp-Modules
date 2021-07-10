@@ -19,6 +19,7 @@ class Character : public ICharacter
 
 		Character &		operator=( Character const & rhs );
 		std::string const & getName() const;
+		int	getIndex() const;
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
@@ -26,4 +27,4 @@ class Character : public ICharacter
 
 std::ostream &			operator<<( std::ostream & o, Character const & i );
 
-#endif /* ******************************************************* CHARACTER_H */
+#endif

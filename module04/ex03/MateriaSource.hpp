@@ -20,6 +20,8 @@ class MateriaSource : public IMateriaSource
 
 	private:
 
+		AMateria	*_slots[5];
+		int			_count;
 };
 
 std::ostream &			operator<<( std::ostream & o, MateriaSource const & i );
