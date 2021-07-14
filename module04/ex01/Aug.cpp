@@ -1,14 +1,9 @@
 #include "Aug.hpp"
 
 
-Aug::Aug( void ) : AWeapon("AUG ", 5, 21) { 
+Aug::Aug( void ) : AWeapon("AUG ", 5, 21) {}
 
-
-}
-Aug::~Aug() {
-
-	//std::cout << "Default destructor Called" << std::cout;
-}
+Aug::~Aug() {}
 
 void	Aug::attack( void )  const {
 
@@ -21,8 +16,8 @@ Aug::Aug(const Aug & h) : AWeapon(h) {
 	*this = h;
 }
 
-// Aug &Aug::operator=(const Aug & h) {
+Aug &Aug::operator=(const Aug & h) {
 
-// 	*this = h;
-// 	return (*this);
-// }
+	*this = h;
+	return (*this);
+}

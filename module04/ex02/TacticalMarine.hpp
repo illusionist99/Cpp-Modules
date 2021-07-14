@@ -11,16 +11,23 @@ class TacticalMarine : public ISpaceMarine
 	public:
 
 		TacticalMarine();
-		TacticalMarine( TacticalMarine const & src );
-		~TacticalMarine();
 
+
+		virtual ~TacticalMarine();
+
+		TacticalMarine(TacticalMarine const & rhs);
+		
 		TacticalMarine &operator=( TacticalMarine const & rhs );
+
 		void	rangedAttack() const;
 		void	meleeAttack() const;
 		void	battleCry() const;
+
 		ISpaceMarine* clone() const;
+
 	private:
 		ISpaceMarine *_marine;
+
 };
 
 #endif

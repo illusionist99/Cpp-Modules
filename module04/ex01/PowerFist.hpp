@@ -1,5 +1,4 @@
-#ifndef __POWERFIST__HPP__
-#define __POWERFIST__HPP__
+#pragma once
 
 
 #include "AWeapon.hpp"
@@ -14,10 +13,8 @@ class PowerFist : public AWeapon
 		virtual ~PowerFist( void );
 		
 		PowerFist(const PowerFist &h );
-		//PowerFist &operator=(const PowerFist &h);
+		PowerFist &operator=(const PowerFist &h);
 
 		void	attack( void ) const;
 };
 
-
-#endif

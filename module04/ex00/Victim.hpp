@@ -10,8 +10,8 @@
 class Victim
 {
 
-		Victim( void );
 	protected:
+		Victim( void );
 		std::string _name;
 
 	public:

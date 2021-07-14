@@ -1,5 +1,4 @@
-#ifndef __AWEAPON_HPP__
-#define __AWEAPON_HPP__
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -17,6 +16,7 @@ protected:
 public:
 	AWeapon( std::string const & name, int apcost, int damage);
 	virtual ~AWeapon( void );
+
 	std::string getName() const;
 	int 	getAPCost() const;
 	int		getDamage() const;
@@ -27,4 +27,3 @@ public:
 
 };
 
-#endif

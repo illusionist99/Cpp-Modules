@@ -1,14 +1,9 @@
 #include "PlasmaRifle.hpp"
 
 
-PlasmaRifle::PlasmaRifle( void ) : AWeapon("Plasma Rifle", 5, 21) { 
+PlasmaRifle::PlasmaRifle( void ) : AWeapon("Plasma Rifle", 5, 21) { }
 
-
-}
-PlasmaRifle::~PlasmaRifle() {
-
-	//std::cout << "Default destructor Called" << std::cout;
-}
+PlasmaRifle::~PlasmaRifle() {}
 
 void	PlasmaRifle::attack( void )  const {
 
@@ -21,8 +16,8 @@ PlasmaRifle::PlasmaRifle(const PlasmaRifle & h) : AWeapon(h) {
 	*this = h;
 }
 
-// PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle & h) {
+PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle & h) {
 
-// 	*this = h;
-// 	return (*this);
-// }
+	*this = h;
+	return (*this);
+}

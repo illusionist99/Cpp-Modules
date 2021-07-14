@@ -1,7 +1,6 @@
 #include "SuperMutant.hpp"
 
 
-
 SuperMutant::SuperMutant( void ) : Enemy( 170, "Super Mutant" ) {
 
     std::cout << "Gaaah. Me want smash heads!" << std::endl;
@@ -29,8 +28,8 @@ SuperMutant::SuperMutant( const SuperMutant & h) : Enemy( h ) {
 	*this = h;
 }
 
-// SuperMutant &SuperMutant::operator=(const SuperMutant & h)  {
+SuperMutant &SuperMutant::operator=(const SuperMutant & h)  {
 
-// 	*this = h;
-// 	return (*this);
-// }
+	*this = h;
+	return (*this);
+}

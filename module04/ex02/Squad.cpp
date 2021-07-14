@@ -1,8 +1,5 @@
 #include "Squad.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 ISpaceMarine* Squad::getUnit(int n) const {
 
@@ -55,6 +52,8 @@ Squad::~Squad()
 		delete _unit->unit;
 		_unit = _unit->next;
 	}
+	_unit = NULL;
+	delete _unit;
 }
 
 
@@ -102,10 +101,18 @@ int		Squad::push(ISpaceMarine *u) {
 	int i;
 	t_unit *t;
 	t_unit *h;
+	t_unit *d;
 
 	i = 0;
+	d = _unit;
 	if (u == NULL)
 		return getCount();
+	while (d != NULL) {
+	
+		if (d->unit == u)
+			return getCount();
+		d = d->next;
+	}
 	if (_unit == NULL)
 	{
 		_unit = new t_unit;

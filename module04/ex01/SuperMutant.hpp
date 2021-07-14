@@ -1,5 +1,4 @@
-#ifndef __SUPERMUTANT_HPP__
-# define  __SUPERMUTANT_HPP__
+#pragma once
 
 #include "Enemy.hpp"
 
@@ -11,8 +10,6 @@ class   SuperMutant :  public Enemy
         virtual ~SuperMutant( void );
 
         SuperMutant( const SuperMutant & h);
-        //SuperMutant &operator=(const SuperMutant & h);
+        SuperMutant &operator=(const SuperMutant & h);
         void takeDamage( int );
 };
-
-#endif

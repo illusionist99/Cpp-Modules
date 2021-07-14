@@ -1,9 +1,5 @@
 #include "TacticalMarine.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 TacticalMarine::TacticalMarine()
 {
 	std::cout << "Tactical Marine ready for battle!" << std::endl;
@@ -20,8 +16,6 @@ TacticalMarine::~TacticalMarine()
 	std::cout << "Aaargh..." << std::endl;
 }
 
-
-
 TacticalMarine &				TacticalMarine::operator=( TacticalMarine const & rhs )
 {
 	if ( this != &rhs )
@@ -29,7 +23,10 @@ TacticalMarine &				TacticalMarine::operator=( TacticalMarine const & rhs )
 	return *this;
 }
 
+TacticalMarine::TacticalMarine(TacticalMarine const & rhs) {
 
+	_marine = rhs.clone();
+}
 
 void	TacticalMarine::battleCry() const {
 
@@ -48,9 +45,7 @@ void	TacticalMarine::meleeAttack() const {
 
 }
 
-
 ISpaceMarine* TacticalMarine::clone() const {
 
 	return _marine;
 }
-

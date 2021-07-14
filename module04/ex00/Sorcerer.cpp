@@ -1,9 +1,6 @@
 #include "Sorcerer.hpp"
 
-Sorcerer::Sorcerer( void ) {
-
-	std::cout << "Default Constructor called" << std::endl;
-}
+Sorcerer::Sorcerer( void ) {}
 
 std::string Sorcerer::getName() const {
 
@@ -34,16 +31,6 @@ void	Sorcerer::polymorph( Victim const & v) const {
 }
 
 
-// void	Sorcerer::polymorph( Dog const & v) const {
-
-// 	v.getPolymorphed();
-// }
-
-
-// void	Sorcerer::polymorph( Peon const & v) const {
-
-// 	v.getPolymorphed();
-// }
 
 Sorcerer::~Sorcerer( void ) {
 
@@ -66,8 +53,3 @@ Sorcerer Sorcerer::operator=( const Sorcerer & h ) {
 	_title = h.getTitle();
 	return (*this);
 }
-
-// void	Sorcerer::polymorph( Pig const &v ) const {
-
-// 	v.getPolymorphed();
-// }

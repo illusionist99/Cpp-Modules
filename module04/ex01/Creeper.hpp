@@ -1,5 +1,4 @@
-#ifndef __ZOMBIE_HPP__
-# define __ZOMBIE_HPP__
+#pragma once
 
 #include "Enemy.hpp"
 
@@ -10,10 +9,8 @@ class   Creeper :  public Enemy
         Creeper();
         virtual ~Creeper( void );
 
-       // Creeper &operator=(const Creeper & h);
+        Creeper &operator=(const Creeper & h);
         Creeper(const Creeper & h);
+        
         void takeDamage( int );
 };
-
-
-#endif

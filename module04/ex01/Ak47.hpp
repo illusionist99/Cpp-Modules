@@ -1,6 +1,4 @@
-#ifndef __AK47__HPP__
-#define __AK47__HPP__
-
+#pragma once
 
 #include "AWeapon.hpp"
 
@@ -15,10 +13,7 @@ class Ak47 : public AWeapon
 		virtual ~Ak47( void );
 
 		Ak47(const Ak47 & h);
-		//Ak47 &operator=(const Ak47 & h);
+		Ak47 &operator=(const Ak47 & h);
 
 		void	attack( void ) const ;
 };
-
-
-#endif

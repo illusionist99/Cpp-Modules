@@ -26,14 +26,10 @@ public:
 
 	Sorcerer( const Sorcerer & h );
 	Sorcerer operator=( const Sorcerer & h );
-	
-	//void	polymorph( Peon const & ) const;
+
 	void	polymorph( Victim const & ) const;
-	// void	polymorph( Dog const & ) const;
-	// void	polymorph( Pig const & ) const;
 
 	~Sorcerer( void );
-	
 };
 
 

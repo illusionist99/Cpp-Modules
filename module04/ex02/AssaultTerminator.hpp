@@ -12,10 +12,11 @@ class AssaultTerminator : public ISpaceMarine
 	public:
 
 		AssaultTerminator();
-		AssaultTerminator( AssaultTerminator const & src );
-		~AssaultTerminator();
+		virtual ~AssaultTerminator();
 
+		AssaultTerminator( AssaultTerminator const & src );
 		AssaultTerminator &		operator=( AssaultTerminator const & rhs );
+
 		void	rangedAttack() const;
 		void	meleeAttack() const;
 		void	battleCry() const;

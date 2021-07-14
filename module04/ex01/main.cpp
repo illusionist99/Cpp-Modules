@@ -6,6 +6,8 @@
 
 #include "Ak47.hpp"
 #include "Aug.hpp"
+#include "Creeper.hpp"
+#include "Zombie.hpp"
 
 int main()
 {
@@ -16,6 +18,11 @@ int main()
     AWeapon* pf = new PowerFist();
     AWeapon* ak = new Ak47();
     AWeapon* aug = new Aug();
+    Enemy* f = new Zombie();
+    Enemy* t = new Creeper();
+
+    
+    
     me->equip(pr);
     std::cout << *me;
     me->equip(pf);
@@ -25,6 +32,10 @@ int main()
     std::cout << *me;
     me->attack(b);
     std::cout << *me;
+
+ 
+    me->attack(f);
+    me->attack(t);
     me->attack(b);
     std::cout << *me;
     me->equip(ak);

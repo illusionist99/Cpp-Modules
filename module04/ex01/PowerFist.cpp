@@ -20,9 +20,9 @@ PowerFist::PowerFist(const PowerFist &h )  : AWeapon( h ) {
 	*this = h;
 }
 
-// PowerFist &PowerFist::operator=(const PowerFist &h) {
+PowerFist &PowerFist::operator=(const PowerFist &h) {
 
-// 	*this = h;
+	*this = h;
 
-// 	return (*this);
-// }
+	return (*this);
+}

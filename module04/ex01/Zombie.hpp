@@ -1,5 +1,4 @@
-#ifndef __ZOMBIE_HPP__
-# define __ZOMBIE_HPP__
+#pragma once
 
 #include "Enemy.hpp"
 
@@ -10,10 +9,7 @@ class   Zombie :  public Enemy
         Zombie();
         virtual ~Zombie( void );
 
-       // Zombie &operator=(const Zombie & h);
+        Zombie &operator=(const Zombie & h);
         Zombie(const Zombie & h);
         void takeDamage( int );
 };
-
-
-#endif

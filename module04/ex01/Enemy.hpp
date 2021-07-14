@@ -1,5 +1,4 @@
-#ifndef __ENEMY_HPP__
-#define __ENEMY_HPP__
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -24,5 +23,3 @@ class Enemy
 
 		virtual void takeDamage( int );
 };
-
-#endif

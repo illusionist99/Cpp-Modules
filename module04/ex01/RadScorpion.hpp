@@ -1,5 +1,4 @@
-#ifndef __RADSCORPION_HPP__
-# define __RADSCORPION_HPP__
+#pragma once
 
 #include "Enemy.hpp"
 
@@ -10,10 +9,7 @@ class   RadScorpion :  public Enemy
         RadScorpion();
         virtual ~RadScorpion( void );
 
-       // RadScorpion &operator=(const RadScorpion & h);
+        RadScorpion &operator=(const RadScorpion & h);
         RadScorpion(const RadScorpion & h);
         void takeDamage( int );
 };
-
-
-#endif

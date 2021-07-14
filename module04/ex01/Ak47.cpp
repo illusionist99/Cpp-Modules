@@ -1,14 +1,10 @@
 #include "Ak47.hpp"
 
 
-Ak47::Ak47( void ) : AWeapon("Ak-47", 5, 21) { 
+Ak47::Ak47( void ) : AWeapon("Ak-47", 5, 21) {}
 
 
-}
-Ak47::~Ak47() {
-
-	//std::cout << "Default destructor Called" << std::cout;
-}
+Ak47::~Ak47() {}
 
 void	Ak47::attack( void )  const {
 
@@ -21,8 +17,8 @@ Ak47::Ak47(const Ak47 & h) : AWeapon(h) {
 	*this = h;
 }
 
-// Ak47 &Ak47::operator=(const Ak47 & h) {
+Ak47 &Ak47::operator=(const Ak47 & h) {
 
-// 	*this = h;
-// 	return (*this);
-// }
+	*this = h;
+	return (*this);
+}
