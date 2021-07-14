@@ -1,5 +1,4 @@
-#ifndef ICE_HPP
-# define ICE_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -11,15 +10,12 @@ class Ice : public AMateria
 	public:
 
 		Ice();
-		Ice( Ice const & src );
-		~Ice();
+		virtual ~Ice();
 
-		Ice &		operator=( Ice const & rhs );
+		//Ice( Ice const & src );
 		AMateria* clone( void ) const;
 		void use(ICharacter & target);
 
 };
 
 std::ostream &			operator<<( std::ostream & o, Ice const & i );
-
-#endif

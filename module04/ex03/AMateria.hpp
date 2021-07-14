@@ -1,5 +1,4 @@
-#ifndef __AMATERIA_HPP__
-# define __AMATERIA_HPP__
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -27,4 +26,3 @@ class AMateria
 
 std::ostream &			operator<<( std::ostream & o, AMateria const & i );
 
-#endif

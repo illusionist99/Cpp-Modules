@@ -1,14 +1,8 @@
 #include "Cure.hpp"
 
-
-
 Cure::Cure() : AMateria("cure")
 {
 }
-
-// Cure::Cure( const Cure & src )
-// {
-// }
 
 
 
@@ -16,21 +10,12 @@ Cure::~Cure()
 {
 }
 
+// Cure::Cure( Cure const & src )  : AMateria( src ) {
 
-Cure &				Cure::operator=( Cure const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
-}
+// 	*this = src;
+// }
 
-std::ostream &			operator<<( std::ostream & o, Cure const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
+
 
 AMateria* Cure::clone( void ) const {
 

@@ -1,14 +1,9 @@
 #include "Ice.hpp"
 
 
-Ice::Ice( void ) : AMateria("ice")
+Ice::Ice(  ) : AMateria("ice")
 {
 }
-
-// Ice::Ice( const Ice & src ) 
-// {
-// }
-
 
 
 Ice::~Ice()
@@ -16,21 +11,11 @@ Ice::~Ice()
 }
 
 
+// Ice::Ice( Ice const & src )  : AMateria( src ) {
 
-Ice &				Ice::operator=( Ice const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
-}
+// 	*this = src;
+// }
 
-std::ostream &			operator<<( std::ostream & o, Ice const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
 
 
 AMateria* Ice::clone() const {

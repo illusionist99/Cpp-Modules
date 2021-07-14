@@ -7,16 +7,15 @@ AMateria::AMateria( std::string const & type )
 	_xp = 0;
 }
 
-// AMateria::AMateria( const AMateria & src )
-// {
-// }
-
-
-
-AMateria::~AMateria()
+AMateria::AMateria( const AMateria & src )
 {
-
+	_type = src._type;
+	_xp = src._xp;
 }
+
+
+
+AMateria::~AMateria() {}
 
 
 std::string const & AMateria::getType() const {
@@ -37,8 +36,8 @@ AMateria &				AMateria::operator=( AMateria const & rhs )
 }
 
 
-
 void		AMateria::use(ICharacter & target) {
 
 	_xp += 10;
+	(void ) target;
 }

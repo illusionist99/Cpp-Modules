@@ -1,5 +1,4 @@
-#ifndef CURE_HPP
-# define CURE_HPP
+#pragma once 
 
 # include <iostream>
 # include <string>
@@ -11,10 +10,9 @@ class Cure : public AMateria
 	public:
 
 		Cure();
-		Cure( Cure const & src );
-		~Cure();
+		virtual ~Cure();
 
-		Cure &		operator=( Cure const & rhs );
+		//Cure( Cure const & src );
 		AMateria* clone() const;
 		void use(ICharacter & target);
 
@@ -22,4 +20,3 @@ class Cure : public AMateria
 
 std::ostream &			operator<<( std::ostream & o, Cure const & i );
 
-#endif

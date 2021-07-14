@@ -1,8 +1,5 @@
 #include "MateriaSource.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 MateriaSource::MateriaSource()
 {
@@ -15,36 +12,31 @@ MateriaSource::MateriaSource()
 
 MateriaSource::MateriaSource( const MateriaSource & src )
 {
+	_count = src._count;
+
+	_slots[0] = src._slots[0];
+	_slots[1] = src._slots[1];
+	_slots[2] = src._slots[2];
+	_slots[3] = src._slots[3];
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 MateriaSource::~MateriaSource()
 {
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 MateriaSource &				MateriaSource::operator=( MateriaSource const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	_count = rhs._count;
+	_slots[0] = rhs._slots[0];
+	_slots[1] = rhs._slots[1];
+	_slots[2] = rhs._slots[2];
+	_slots[3] = rhs._slots[3];
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, MateriaSource const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
 
 
 void MateriaSource::learnMateria(AMateria* h) {

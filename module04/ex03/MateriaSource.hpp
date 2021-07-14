@@ -1,5 +1,4 @@
-#ifndef MATERIASOURCE_HPP
-# define MATERIASOURCE_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -20,10 +19,9 @@ class MateriaSource : public IMateriaSource
 
 	private:
 
-		AMateria	*_slots[5];
+		AMateria	*_slots[4];
 		int			_count;
 };
 
 std::ostream &			operator<<( std::ostream & o, MateriaSource const & i );
 
-#endif

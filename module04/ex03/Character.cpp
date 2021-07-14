@@ -1,9 +1,5 @@
 #include "Character.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 Character::Character( std::string name) : ICharacter()
 {
 	_name = name;
@@ -56,7 +52,6 @@ std::string const & Character::getName() const {
 
 void Character::equip(AMateria* m) {
 
-	//std::cout << m << std::endl;
 	if (_index >= 0 && _index < 4) {
 	
 		_slots[_index] = m;
@@ -73,7 +68,6 @@ void Character::unequip(int idx) {
 
 void Character::use(int idx, ICharacter& target) {
 
-	//std::cout << idx << std::endl;
 	if (idx >= 0 && idx < _index)
 		_slots[idx]->use(target);
 }

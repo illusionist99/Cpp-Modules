@@ -1,5 +1,4 @@
-#ifndef CHARACTER_HPP
-# define CHARACTER_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -26,5 +25,3 @@ class Character : public ICharacter
 };
 
 std::ostream &			operator<<( std::ostream & o, Character const & i );
-
-#endif
