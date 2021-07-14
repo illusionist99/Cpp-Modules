@@ -17,8 +17,3 @@ Ak47::Ak47(const Ak47 & h) : AWeapon(h) {
 	*this = h;
 }
 
-Ak47 &Ak47::operator=(const Ak47 & h) {
-
-	*this = h;
-	return (*this);
-}

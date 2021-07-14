@@ -28,8 +28,3 @@ SuperMutant::SuperMutant( const SuperMutant & h) : Enemy( h ) {
 	*this = h;
 }
 
-SuperMutant &SuperMutant::operator=(const SuperMutant & h)  {
-
-	*this = h;
-	return (*this);
-}

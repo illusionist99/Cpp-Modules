@@ -13,7 +13,7 @@ class PowerFist : public AWeapon
 		virtual ~PowerFist( void );
 		
 		PowerFist(const PowerFist &h );
-		PowerFist &operator=(const PowerFist &h);
+
 
 		void	attack( void ) const;
 };

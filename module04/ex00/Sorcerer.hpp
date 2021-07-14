@@ -1,5 +1,4 @@
-#ifndef __SORCERER_HPP__
-# define __SORCERER_HPP__
+#pragma once
 
 
 #include <iostream>
@@ -35,5 +34,3 @@ public:
 
 std::ostream& operator<<(std::ostream& os, const Sorcerer& dt);
 
-
-#endif

@@ -12,7 +12,6 @@ class Aug : public AWeapon
 		virtual ~Aug( void );
 
 		Aug(const Aug & h);
-		Aug &operator=(const Aug & h);
 
 		void	attack( void ) const ;
 };

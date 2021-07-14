@@ -29,8 +29,3 @@ Zombie::Zombie( const Zombie & h) : Enemy( h ) {
 	*this = h;
 }
 
-Zombie &Zombie::operator=(const Zombie & h)  {
-
-	*this = h;
-	return (*this);
-}

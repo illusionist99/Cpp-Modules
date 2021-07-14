@@ -16,8 +16,3 @@ PlasmaRifle::PlasmaRifle(const PlasmaRifle & h) : AWeapon(h) {
 	*this = h;
 }
 
-PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle & h) {
-
-	*this = h;
-	return (*this);
-}

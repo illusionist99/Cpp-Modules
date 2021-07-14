@@ -1,5 +1,4 @@
-#ifndef ASSAULTTERMINATOR_HPP
-# define ASSAULTTERMINATOR_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -27,5 +26,3 @@ class AssaultTerminator : public ISpaceMarine
 };
 
 std::ostream &			operator<<( std::ostream & o, AssaultTerminator const & i );
-
-#endif

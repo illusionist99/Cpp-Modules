@@ -1,5 +1,4 @@
-#ifndef __PEON_HPP__
-#define __PEON_HPP__
+#pragma once
 
 #include "Victim.hpp"
 
@@ -19,5 +18,3 @@ public:
 	virtual ~Peon( void );
 
 };
-
-#endif

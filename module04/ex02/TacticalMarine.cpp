@@ -23,11 +23,6 @@ TacticalMarine &				TacticalMarine::operator=( TacticalMarine const & rhs )
 	return *this;
 }
 
-TacticalMarine::TacticalMarine(TacticalMarine const & rhs) {
-
-	_marine = rhs.clone();
-}
-
 void	TacticalMarine::battleCry() const {
 
 	std::cout << "For the holy PLOT!" << std::endl;

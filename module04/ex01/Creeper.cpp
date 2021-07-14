@@ -28,9 +28,3 @@ Creeper::Creeper( const Creeper & h) : Enemy( h ) {
 
 	*this = h;
 }
-
-Creeper &Creeper::operator=(const Creeper & h)  {
-
-	*this = h;
-	return (*this);
-}

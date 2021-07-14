@@ -1,5 +1,4 @@
-#ifndef __Dog_HPP__
-#define __Dog_HPP__
+#pragma once
 
 #include "Victim.hpp"
 
@@ -18,6 +17,3 @@ public:
 	virtual ~Dog( void );
 
 };
-
-
-#endif

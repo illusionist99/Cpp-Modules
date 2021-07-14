@@ -25,10 +25,7 @@ int		AWeapon::getDamage() const {
 }
 
 
-AWeapon::~AWeapon() {
-
-
-}
+AWeapon::~AWeapon() { }
 
 AWeapon::AWeapon(const AWeapon & h) {
 

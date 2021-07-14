@@ -1,5 +1,4 @@
-#ifndef __PIG_HPP__
-#define __PIG_HPP__
+#pragma once
 
 #include "Victim.hpp"
 
@@ -19,5 +18,3 @@ public:
 	virtual ~Pig( void );
 
 };
-
-#endif

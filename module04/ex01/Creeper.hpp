@@ -9,7 +9,7 @@ class   Creeper :  public Enemy
         Creeper();
         virtual ~Creeper( void );
 
-        Creeper &operator=(const Creeper & h);
+
         Creeper(const Creeper & h);
         
         void takeDamage( int );

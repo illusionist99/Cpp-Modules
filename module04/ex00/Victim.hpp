@@ -1,7 +1,4 @@
-#ifndef __VICTM_HPP__
-
-# define __VICTM_HPP__
-
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -26,4 +23,3 @@ class Victim
 
 std::ostream& operator<<(std::ostream& os, const Victim& dt);
 
-#endif

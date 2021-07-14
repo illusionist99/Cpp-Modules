@@ -1,5 +1,4 @@
-#ifndef TACTICALMARINE_HPP
-# define TACTICALMARINE_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -16,7 +15,7 @@ class TacticalMarine : public ISpaceMarine
 		virtual ~TacticalMarine();
 
 		TacticalMarine(TacticalMarine const & rhs);
-		
+
 		TacticalMarine &operator=( TacticalMarine const & rhs );
 
 		void	rangedAttack() const;
@@ -29,5 +28,3 @@ class TacticalMarine : public ISpaceMarine
 		ISpaceMarine *_marine;
 
 };
-
-#endif

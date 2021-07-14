@@ -14,6 +14,7 @@ protected:
 	int		_ap_cost;
 
 public:
+
 	AWeapon( std::string const & name, int apcost, int damage);
 	virtual ~AWeapon( void );
 
@@ -23,7 +24,7 @@ public:
 
 	AWeapon(const AWeapon & h);
 	AWeapon &operator=(const AWeapon & h);
-	virtual void attack() const = 0;
 
+	virtual void attack() const = 0;
 };
 

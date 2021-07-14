@@ -9,7 +9,7 @@ class   Zombie :  public Enemy
         Zombie();
         virtual ~Zombie( void );
 
-        Zombie &operator=(const Zombie & h);
+
         Zombie(const Zombie & h);
         void takeDamage( int );
 };

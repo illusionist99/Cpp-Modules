@@ -16,8 +16,3 @@ Aug::Aug(const Aug & h) : AWeapon(h) {
 	*this = h;
 }
 
-Aug &Aug::operator=(const Aug & h) {
-
-	*this = h;
-	return (*this);
-}
