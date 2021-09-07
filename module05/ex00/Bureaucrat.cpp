@@ -1,8 +1,7 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string name, int grade) {
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 
-	_name = name;
 	if (grade >= 1 && grade <= 150)
 		_grade = grade;
 	else if (grade > 150)
