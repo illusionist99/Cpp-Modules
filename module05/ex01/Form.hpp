@@ -6,7 +6,9 @@
 
 class Bureaucrat;
 
-class Form
+# include "Bureaucrat.hpp"
+
+class Form : public Bureaucrat
 {
 	class GradeTooHighExeption : public std::exception {
 		
