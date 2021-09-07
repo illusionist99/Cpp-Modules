@@ -10,7 +10,7 @@ $(NAME) :
 
 
 clean:
-	rm $(NAME)
+	rm -rf $(NAME)
 
 fclean : clean
 
