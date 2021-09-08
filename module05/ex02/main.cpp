@@ -31,6 +31,10 @@ int     main( void ) {
     
         std::cout << covid;
         covid.beSigned(n);
+
+
+
+        covid.
     }
     catch (std::exception & e) {
         
