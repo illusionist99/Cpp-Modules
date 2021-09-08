@@ -29,6 +29,13 @@ int 		Form::getGradeToExecute() const {
 	return (_grade_to_execute);
 }
 
+void		Form::execute(Bureaucrat const & executor) const {
+
+	executor.signForm(*this);
+	action(*this);
+}
+
+
 Form::Form(std::string name, int grade_to_sign, int grade_to_execute ) : _name(name), _grade_to_sign(checkGrade(grade_to_sign)), _grade_to_execute(checkGrade(grade_to_execute)) 
 {
 	_is_signed = false;

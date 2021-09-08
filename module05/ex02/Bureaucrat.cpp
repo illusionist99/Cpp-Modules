@@ -14,7 +14,12 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
-void 	Bureaucrat::signForm(Form & src) const {
+void	Bureaucrat::executeForm(Form const & form) {
+
+	form.execute(*this);
+}
+
+void 	Bureaucrat::signForm(Form const & src) const {
 
 	if (src.getSign() == true) {
 

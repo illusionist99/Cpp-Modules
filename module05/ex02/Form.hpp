@@ -31,13 +31,22 @@ class Form
 		
 		std::string getName() const;
 		bool		getSign() const;
+
+
 		int 		getGradeToSign() const;
 		int 		getGradeToExecute() const;
+
+		virtual		void		action(Form const & f) const {};
+	
 		void		beSigned(Bureaucrat & src);
-		~Form( void );
+		void		execute(Bureaucrat const & executor) const;
+
+
+		virtual ~Form( );
 
 	private:
 
+		Form();
 		int	checkGrade(int grade) const;
 		const std::string _name;
 		bool _is_signed;
