@@ -11,12 +11,9 @@ class ShrubberyCreationForm : public Form
 	public:
 
 		ShrubberyCreationForm( std::string target );
-		//ShrubberyCreationForm( ShrubberyCreationForm const & src );
-		void		action(Form const & f) const;
 		~ShrubberyCreationForm();
-		//ShrubberyCreationForm &		operator=( ShrubberyCreationForm const & rhs );
 
-
+		void		action(Form const & f) const;
 };
 
 std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i );

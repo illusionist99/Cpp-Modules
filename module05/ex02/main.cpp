@@ -34,7 +34,8 @@ int     main( void ) {
 
 
 
-        covid.
+    
+
     }
     catch (std::exception & e) {
         

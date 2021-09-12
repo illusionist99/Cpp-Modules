@@ -49,6 +49,11 @@ void		Form::beSigned(Bureaucrat & src) {
 
 }
 
+void		Form::action(Form const & f) const {
+
+	(void )f;
+}
+
 Form::~Form()
 {
 }

@@ -36,7 +36,7 @@ class Form
 		int 		getGradeToSign() const;
 		int 		getGradeToExecute() const;
 
-		virtual		void		action(Form const & f) const {};
+		virtual		void		action(Form const & f) const;
 	
 		void		beSigned(Bureaucrat & src);
 		void		execute(Bureaucrat const & executor) const;
