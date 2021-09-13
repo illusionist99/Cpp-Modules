@@ -19,6 +19,12 @@ void		RobotomyRequestForm::action(Form const & f) const {
 
 }
 
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& e) {
+
+	(void )e;
+	return (*this);
+}
+
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {

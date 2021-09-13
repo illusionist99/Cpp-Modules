@@ -41,8 +41,9 @@ class Form
 		void		beSigned(Bureaucrat & src);
 		void		execute(Bureaucrat const & executor) const;
 
+		Form& operator=(const Form& e);
 
-		virtual ~Form( );
+		~Form( );
 
 	private:
 
