@@ -36,7 +36,7 @@ int     main( void ) {
         Intern someRandomIntern;
         Form* rrf;
 
-        rrf = someRandomIntern.makeForm("robotomy requestl", "Bender");
+        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
     
 
     }

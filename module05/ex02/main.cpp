@@ -1,6 +1,8 @@
 # include "Bureaucrat.hpp"
 # include "Form.hpp"
 
+
+
 int     main( void ) {
 
     try {
@@ -31,10 +33,9 @@ int     main( void ) {
     
         std::cout << covid;
         covid.beSigned(n);
+  
 
 
-
-    
 
     }
     catch (std::exception & e) {

@@ -13,10 +13,6 @@ class Intern
 
 		Intern();
 		~Intern();
-		// Form *createPpf( std::string target );
-		// Form *createRrf( std::string target );
-		// Form *createSrf( std::string target );
-
 
 		Form *makeForm( std::string name, std::string target );
 
