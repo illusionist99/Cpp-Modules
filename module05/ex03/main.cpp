@@ -1,5 +1,6 @@
 # include "Bureaucrat.hpp"
 # include "Form.hpp"
+# include "Intern.hpp"
 
 int     main( void ) {
 
@@ -32,8 +33,10 @@ int     main( void ) {
         std::cout << covid;
         covid.beSigned(n);
 
+        Intern someRandomIntern;
+        Form* rrf;
 
-
+        rrf = someRandomIntern.makeForm("robotomy requestl", "Bender");
     
 
     }
