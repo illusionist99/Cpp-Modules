@@ -33,7 +33,6 @@ class Form
 		bool		getSign() const;
 
 
-		// std::string getType() const;
 		int 		getGradeToSign() const;
 		int 		getGradeToExecute() const;
 
@@ -42,8 +41,9 @@ class Form
 		void		beSigned(Bureaucrat & src);
 		void		execute(Bureaucrat const & executor) const;
 
+		Form& operator=(const Form& e);
 
-		virtual ~Form( );
+		~Form( );
 
 	private:
 

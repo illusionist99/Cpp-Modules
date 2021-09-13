@@ -39,6 +39,12 @@ void	Bureaucrat::decrementGrade( void ) {
 		throw Bureaucrat::GradeTooLowExeption();
 }
 
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& e) {
+
+	_grade = e.getGrade();
+	return (*this);
+}
+
 std::string Bureaucrat::getName( void ) const {
 
 	return _name;

@@ -11,6 +11,12 @@ void		PresidentialPardonForm::action(Form const & f) const {
 
 }
 
+PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& e) {
+
+	(void )e;
+	return (*this);
+}
+
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {

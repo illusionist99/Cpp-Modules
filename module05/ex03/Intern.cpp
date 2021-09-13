@@ -34,13 +34,9 @@ Intern::~Intern()
 Form *Intern::makeForm( std::string name, std::string target ) {
 
     Form *f = NULL;
-    std::map<const std::string, Form *(*)(std::string t)> m;
-    m["robotomy request"] =  &createRrf;
-    m["shrubbery creation"] = &createSrf;
-    m["presidential pardon"] = &createPpf;
-
-
-    f = m.find(name) != m.end() ? m[name](target) : NULL;
+    Form *(*r)(std::string t);
+    r = ((name == "robotomy request") ? &createRrf : (name == "shrubbery creation" ? &createSrf : (name == "presidential pardon" ? &createPpf : NULL)));
+    f = (r == NULL) ? NULL : r(target);
     std::cout << ((f == NULL) ? "Error While making Form\n" : "");
     
     return f;

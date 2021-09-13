@@ -58,6 +58,13 @@ Form::~Form()
 {
 }
 
+Form& Form::operator=(const Form& e) {
+
+	_is_signed = e.getSign();
+	return (*this);
+}
+
+
 
 std::ostream &			operator<<( std::ostream & o, Form const & i )
 {

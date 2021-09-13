@@ -36,6 +36,8 @@ class Bureaucrat
 		std::string getName( void ) const;
 		int		getGrade( void ) const;
 		void 	signForm(Form & src) const;
+		Bureaucrat& operator=(const Bureaucrat& e);
+
 	private:
 
 		const std::string _name;

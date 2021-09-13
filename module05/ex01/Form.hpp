@@ -34,6 +34,9 @@ class Form
 		int 		getGradeToSign() const;
 		int 		getGradeToExecute() const;
 		void		beSigned(Bureaucrat & src);
+
+		Form& operator=(const Form& e);
+
 		~Form( void );
 
 	private:

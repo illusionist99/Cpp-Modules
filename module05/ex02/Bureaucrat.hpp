@@ -38,6 +38,8 @@ class Bureaucrat
 		void 	signForm(Form const  & src) const;
 		void	executeForm(Form const & form);
 
+		Bureaucrat& operator=(const Bureaucrat& e);
+
 
 	private:
 

@@ -34,6 +34,12 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_execute ) : _name(n
 	_is_signed = false;
 }
 
+Form& Form::operator=(const Form& e) {
+
+	_is_signed = e.getSign();
+	return (*this);
+}
+
 void		Form::beSigned(Bureaucrat & src) {
 
 	checkGrade(src.getGrade());

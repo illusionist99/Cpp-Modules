@@ -32,6 +32,7 @@ class Bureaucrat
 		void	decrementGrade( void );
 		std::string getName( void ) const;
 		int	getGrade( void ) const;
+		Bureaucrat& operator=(const Bureaucrat& e);
 
 	private:
 

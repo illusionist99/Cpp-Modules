@@ -33,6 +33,12 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 	return o;
 }
 
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& e) {
+
+	_grade = e.getGrade();
+	return (*this);
+}
+
 void	Bureaucrat::incrementGrade( void ) {
 
 	_grade -= 1;
