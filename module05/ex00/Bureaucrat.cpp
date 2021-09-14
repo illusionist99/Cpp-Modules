@@ -24,19 +24,19 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 void	Bureaucrat::incrementGrade( void ) {
 
 	_grade -= 1;
-	if ( _grade > 150)
-		throw Bureaucrat::GradeTooHighExeption();
-	else if (_grade < 1)
+	if (_grade > 150)
 		throw Bureaucrat::GradeTooLowExeption();
+	else if (_grade < 1)
+		throw Bureaucrat::GradeTooHighExeption();
 }
 
 void	Bureaucrat::decrementGrade( void ) {
 
 	_grade += 1;
 	if (_grade > 150)
-		throw Bureaucrat::GradeTooHighExeption();
-	else if (_grade < 1)
 		throw Bureaucrat::GradeTooLowExeption();
+	else if (_grade < 1)
+		throw Bureaucrat::GradeTooHighExeption();
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& e) {

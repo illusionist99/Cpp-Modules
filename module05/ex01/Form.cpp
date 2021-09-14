@@ -4,9 +4,9 @@
 int	Form::checkGrade( int grade ) const {
 
 	if (grade > 150)
-		throw Form::GradeTooHighExeption();
-	else if (grade < 1)
 		throw Form::GradeTooLowExeption();
+	else if (grade < 1)
+		throw Form::GradeTooHighExeption();
 	return (grade);
 }
 

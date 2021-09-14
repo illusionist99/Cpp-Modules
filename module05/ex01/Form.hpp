@@ -8,23 +8,25 @@ class Bureaucrat;
 
 class Form
 {
-	class GradeTooHighExeption : public std::exception {
-		
-		const char * what () const throw () {
-    
-			return "GradeTooHighExeption";
-   		}
-	};
-
-	class GradeTooLowExeption : public std::exception {
-		
-		const char * what () const throw () {
-
-			return "GradeTooLowExeption";
-		}
-	};
-
 	public:
+
+		class GradeTooHighExeption : public std::exception {
+			
+			const char * what () const throw () {
+		
+				return "GradeTooHighExeption";
+			}
+		};
+
+		class GradeTooLowExeption : public std::exception {
+			
+			const char * what () const throw () {
+
+				return "GradeTooLowExeption";
+			}
+		};
+
+
 
 		Form( std::string name, int grade_to_sign, int grade_to_execute );
 
@@ -33,6 +35,9 @@ class Form
 		bool		getSign() const;
 		int 		getGradeToSign() const;
 		int 		getGradeToExecute() const;
+
+
+
 		void		beSigned(Bureaucrat & src);
 
 		Form& operator=(const Form& e);
@@ -42,10 +47,10 @@ class Form
 	private:
 
 		int	checkGrade(int grade) const;
-		const std::string _name;
-		bool _is_signed;
-		const int _grade_to_sign;
-		const int _grade_to_execute;
+		const std::string 		_name;
+		bool 					_is_signed;
+		const int 				_grade_to_sign;
+		const int 				_grade_to_execute;
 		
 };
 

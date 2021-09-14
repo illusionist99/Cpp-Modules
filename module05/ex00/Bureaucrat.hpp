@@ -28,11 +28,13 @@ class Bureaucrat
 		Bureaucrat(std::string name, int grade);
 		~Bureaucrat();
 
-		void	incrementGrade( void );
-		void	decrementGrade( void );
-		std::string getName( void ) const;
-		int	getGrade( void ) const;
-		Bureaucrat& operator=(const Bureaucrat& e);
+		void			incrementGrade( void );
+		void			decrementGrade( void );
+
+		std::string 	getName( void ) const;
+		int				getGrade( void ) const;
+
+		Bureaucrat& 	operator=(const Bureaucrat& e);
 
 	private:
 

@@ -6,7 +6,7 @@ int     main( void ) {
     try {
 
         // Test Bureaucrat
-        Bureaucrat n("test", 1);
+        Bureaucrat n("test", 100);
         std::cout << n;
         std::cout << "decrement" << std::endl;
         n.decrementGrade();

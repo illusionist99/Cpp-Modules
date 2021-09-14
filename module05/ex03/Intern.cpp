@@ -1,5 +1,4 @@
 # include "Intern.hpp"
-# include <map>
 
 Intern::Intern()
 {
@@ -26,18 +25,28 @@ Form *createSrf( std::string target ) {
 
 Intern::~Intern()
 {
-    
-
 }
 
 
 Form *Intern::makeForm( std::string name, std::string target ) {
 
-    Form *f = NULL;
-    Form *(*r)(std::string t);
-    r = ((name == "robotomy request") ? &createRrf : (name == "shrubbery creation" ? &createSrf : (name == "presidential pardon" ? &createPpf : NULL)));
-    f = (r == NULL) ? NULL : r(target);
-    std::cout << ((f == NULL) ? "Error While making Form\n" : "");
+    std::string types[3];
+    Form *((*r[3])(std::string t));
+    int i;
+
+    i = 0;
+    types[0] = "robotomy request";
+    types[1] = "shrubbery creation";
+    types[2] = "presidential pardon";
+    r[0] = &createRrf;
+    r[1] = &createSrf;
+    r[2] = &createPpf;
+    while (i < 3) {
+        if (name == types[i])
+            return (r[i](target));
+        i++;
+    }
+    std::cout <<  "Error While making Form\n";
     
-    return f;
+    return (NULL);
 }

@@ -15,8 +15,5 @@ class Intern
 		~Intern();
 
 		Form *makeForm( std::string name, std::string target );
-
-		private:
-			static Form jump_table[5];
 };
 

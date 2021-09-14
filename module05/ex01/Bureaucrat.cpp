@@ -5,9 +5,9 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 	if (grade >= 1 && grade <= 150)
 		_grade = grade;
 	else if (grade > 150)
-		throw Bureaucrat::GradeTooHighExeption();
-	else
 		throw Bureaucrat::GradeTooLowExeption();
+	else
+		throw Bureaucrat::GradeTooHighExeption();
 }
 
 Bureaucrat::~Bureaucrat()
@@ -16,13 +16,15 @@ Bureaucrat::~Bureaucrat()
 
 void 	Bureaucrat::signForm(Form & src) const {
 
-	if (src.getSign() == true) {
+	if (src.getSign() == true)
+		std::cout << _name << " Cannot Sign " << src.getName() << " Because the Form is already Signed" << std::endl;
+	else if (_grade > src.getGradeToSign()) {
 
-		std::cout << _name << " Cannot Sign " << src.getName() << " Because it is already Signed" << std::endl;
-	}
-	else if (src.getGradeToSign() > _grade)
+		if (_grade - src.getGradeToSign() > 60)
+			throw Form::GradeTooLowExeption();
 		std::cout << _name << " Cannot Sign " << src.getName() << " Because Grade Too low" << std::endl;
-	else
+	}
+	else if (src.getGradeToSign() < _grade)
 		std::cout << _name << " Signs " << src.getName() << std::endl;
 
 }
@@ -42,19 +44,19 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& e) {
 void	Bureaucrat::incrementGrade( void ) {
 
 	_grade -= 1;
-	if ( _grade > 150)
-		throw Bureaucrat::GradeTooHighExeption();
-	else if (_grade < 1)
+	if (_grade > 150)
 		throw Bureaucrat::GradeTooLowExeption();
+	else if (_grade < 1)
+		throw Bureaucrat::GradeTooHighExeption();
 }
 
 void	Bureaucrat::decrementGrade( void ) {
 
 	_grade += 1;
 	if (_grade > 150)
-		throw Bureaucrat::GradeTooHighExeption();
-	else if (_grade < 1)
 		throw Bureaucrat::GradeTooLowExeption();
+	else if (_grade < 1)
+		throw Bureaucrat::GradeTooHighExeption();
 }
 
 std::string Bureaucrat::getName( void ) const {

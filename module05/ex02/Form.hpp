@@ -8,23 +8,25 @@ class Bureaucrat;
 
 class Form
 {
-	class GradeTooHighExeption : public std::exception {
-		
-		const char * what () const throw () {
-    
-			return "GradeTooHighExeption";
-   		}
-	};
-
-	class GradeTooLowExeption : public std::exception {
-		
-		const char * what () const throw () {
-
-			return "GradeTooLowExeption";
-		}
-	};
-
 	public:
+
+		class GradeTooHighExeption : public std::exception {
+			
+			const char * what () const throw () {
+		
+				return "GradeTooHighExeption";
+			}
+		};
+
+		class GradeTooLowExeption : public std::exception {
+			
+			const char * what () const throw () {
+
+				return "GradeTooLowExeption";
+			}
+		};
+
+
 
 		Form( std::string name, int grade_to_sign, int grade_to_execute );
 
