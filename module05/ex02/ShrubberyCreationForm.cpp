@@ -29,6 +29,9 @@ void		ShrubberyCreationForm::action(Form const & f) const {
 
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj) : Form(obj) {
+	
+}
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& e) {
 

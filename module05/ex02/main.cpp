@@ -35,8 +35,6 @@ int     main( void ) {
         covid.beSigned(n);
   
 
-
-
     }
     catch (std::exception & e) {
         

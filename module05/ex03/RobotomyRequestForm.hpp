@@ -10,11 +10,14 @@ class RobotomyRequestForm : public Form
 	public:
 
 		RobotomyRequestForm( std::string target );
+		
+		RobotomyRequestForm(const RobotomyRequestForm &obj);
+		RobotomyRequestForm& operator=(const RobotomyRequestForm& e);
+		
 		~RobotomyRequestForm();
 
 		void		action(Form const & f) const;
 
-		RobotomyRequestForm& operator=(const RobotomyRequestForm& e);
 };
 
 std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i );

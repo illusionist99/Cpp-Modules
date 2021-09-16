@@ -7,26 +7,32 @@
 class Bureaucrat
 {
 
-	class GradeTooHighExeption : public std::exception {
-		
-		const char * what () const throw () {
-    
-			return "GradeTooHighExeption";
-   		}
-	};
-
-	class GradeTooLowExeption : public std::exception {
-		
-		const char * what () const throw () {
-
-			return "GradeTooLowExeption";
-		}
-	};
-
 	public:
 
+		class GradeTooHighExeption : public std::exception {
+			
+			const char * what () const throw () {
+		
+				return "GradeTooHighExeption";
+			}
+		};
+
+		class GradeTooLowExeption : public std::exception {
+			
+			const char * what () const throw () {
+
+				return "GradeTooLowExeption";
+			}
+		};
+
+
 		Bureaucrat(std::string name, int grade);
+
+		Bureaucrat( const Bureaucrat &obj);
+		Bureaucrat& 	operator=(const Bureaucrat& e);
+
 		~Bureaucrat();
+
 
 		void			incrementGrade( void );
 		void			decrementGrade( void );
@@ -34,10 +40,10 @@ class Bureaucrat
 		std::string 	getName( void ) const;
 		int				getGrade( void ) const;
 
-		Bureaucrat& 	operator=(const Bureaucrat& e);
 
 	private:
 
+		Bureaucrat();
 		const std::string _name;
 		int	_grade;
 };

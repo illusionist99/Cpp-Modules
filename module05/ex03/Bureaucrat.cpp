@@ -33,6 +33,10 @@ void 	Bureaucrat::signForm(Form const & src) const {
 		std::cout << _name << " Signs " << src.getName() << std::endl;
 }
 
+Bureaucrat::Bureaucrat( const Bureaucrat &obj) : _name(obj.getName()), _grade(obj.getGrade()) {
+
+}
+
 
 std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 {

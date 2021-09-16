@@ -9,39 +9,44 @@ class Form;
 
 class Bureaucrat
 {
+	public:
 
-	class GradeTooHighExeption : public std::exception {
+		class GradeTooHighExeption : public std::exception {
+			
+			const char * what () const throw () {
 		
-		const char * what () const throw () {
-    
-			return "GradeTooHighExeption";
-   		}
-	};
+				return "GradeTooHighExeption";
+			}
+		};
 
-	class GradeTooLowExeption : public std::exception {
-		
-		const char * what () const throw () {
+		class GradeTooLowExeption : public std::exception {
+			
+			const char * what () const throw () {
 
-			return "GradeTooLowExeption";
-		}
-	};
+				return "GradeTooLowExeption";
+			}
+		};
 
 	public:
 
 		Bureaucrat(std::string name, int grade);
+
+		Bureaucrat( const Bureaucrat &obj);
+		Bureaucrat& operator=(const Bureaucrat& e);
+		
 		~Bureaucrat();
 
-		void	incrementGrade( void );
-		void	decrementGrade( void );
+		void			incrementGrade( void );
+		void			decrementGrade( void );
 		std::string 	getName( void ) const;
 		int				getGrade( void ) const;
 
 		void 	signForm(Form & src) const;
 
-		Bureaucrat& operator=(const Bureaucrat& e);
 
 	private:
 
+		Bureaucrat();
 		const std::string _name;
 		int	_grade;
 };

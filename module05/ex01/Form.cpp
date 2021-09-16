@@ -34,6 +34,11 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_execute ) : _name(n
 	_is_signed = false;
 }
 
+Form::Form( const Form &obj) : _name(obj.getName()), _is_signed(obj.getSign()), _grade_to_sign(obj.getGradeToSign()), _grade_to_execute(obj.getGradeToExecute()) {
+
+}
+
+
 Form& Form::operator=(const Form& e) {
 
 	_is_signed = e.getSign();

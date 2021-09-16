@@ -54,6 +54,10 @@ void		Form::action(Form const & f) const {
 	(void )f;
 }
 
+Form::Form( const Form &obj) : _name(obj.getName()), _is_signed(obj.getSign()), _grade_to_sign(obj.getGradeToSign()), _grade_to_execute(obj.getGradeToExecute()) {
+
+}
+
 Form::~Form()
 {
 }

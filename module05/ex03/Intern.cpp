@@ -28,24 +28,40 @@ Intern::~Intern()
 }
 
 
+
+Intern::Intern(const Intern &obj) {
+
+
+}
+
+Intern Intern::operator=(const Intern &obj) {
+
+    return (*this);
+}
+
 Form *Intern::makeForm( std::string name, std::string target ) {
 
-    std::string types[3];
-    Form *((*r[3])(std::string t));
+    std::string     types[3];
+    Form            *((*r[3])(std::string t));
+    
     int i;
 
     i = 0;
+    
     types[0] = "robotomy request";
     types[1] = "shrubbery creation";
     types[2] = "presidential pardon";
+    
     r[0] = &createRrf;
     r[1] = &createSrf;
     r[2] = &createPpf;
+    
     while (i < 3) {
         if (name == types[i])
             return (r[i](target));
         i++;
     }
+
     std::cout <<  "Error While making Form\n";
     
     return (NULL);

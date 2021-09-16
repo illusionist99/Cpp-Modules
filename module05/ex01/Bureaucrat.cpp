@@ -14,6 +14,11 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
+
+Bureaucrat::Bureaucrat( const Bureaucrat &obj) : _name(obj.getName()), _grade(obj.getGrade()) {
+
+}
+
 void 	Bureaucrat::signForm(Form & src) const {
 
 	if (src.getSign() == true)

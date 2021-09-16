@@ -58,6 +58,10 @@ void	Bureaucrat::decrementGrade( void ) {
 		throw Bureaucrat::GradeTooHighExeption();
 }
 
+Bureaucrat::Bureaucrat( const Bureaucrat &obj) : _name(obj.getName()), _grade(obj.getGrade()) {
+
+}
+
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& e) {
 
 	_grade = e.getGrade();

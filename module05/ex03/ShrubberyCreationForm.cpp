@@ -2,6 +2,7 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form(target, 145, 137)
 {
+
 }
 
 void		ShrubberyCreationForm::action(Form const & f) const {
@@ -25,8 +26,12 @@ void		ShrubberyCreationForm::action(Form const & f) const {
 	"	        |";
 
 	myFile.close();
+
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj) : Form(obj) {
+	
+}
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& e) {
 

@@ -30,7 +30,11 @@ class Form
 
 		Form( std::string name, int grade_to_sign, int grade_to_execute );
 
-		
+		Form( const Form &obj);
+		Form& operator=(const Form& e);
+
+		~Form( void );
+
 		std::string getName() const;
 		bool		getSign() const;
 		int 		getGradeToSign() const;
@@ -40,9 +44,6 @@ class Form
 
 		void		beSigned(Bureaucrat & src);
 
-		Form& operator=(const Form& e);
-
-		~Form( void );
 
 	private:
 

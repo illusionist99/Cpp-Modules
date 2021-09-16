@@ -19,6 +19,10 @@ void		RobotomyRequestForm::action(Form const & f) const {
 
 }
 
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &obj) : Form(obj) {
+	
+}
+
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& e) {
 
 	(void )e;

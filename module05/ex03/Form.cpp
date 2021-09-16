@@ -65,6 +65,9 @@ Form& Form::operator=(const Form& e) {
 }
 
 
+Form::Form( const Form &obj) : _name(obj.getName()), _is_signed(obj.getSign()), _grade_to_sign(obj.getGradeToSign()), _grade_to_execute(obj.getGradeToExecute()) {
+
+}
 
 std::ostream &			operator<<( std::ostream & o, Form const & i )
 {

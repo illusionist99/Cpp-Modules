@@ -29,7 +29,11 @@ class Form
 
 
 		Form( std::string name, int grade_to_sign, int grade_to_execute );
-
+		
+		Form( const Form &obj);
+		Form& operator=(const Form& e);
+		
+		~Form( );
 		
 		std::string getName() const;
 		bool		getSign() const;
@@ -43,9 +47,7 @@ class Form
 		void		beSigned(Bureaucrat & src);
 		void		execute(Bureaucrat const & executor) const;
 
-		Form& operator=(const Form& e);
 
-		~Form( );
 
 	private:
 

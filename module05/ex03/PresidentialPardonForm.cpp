@@ -17,6 +17,9 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 	return (*this);
 }
 
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &obj) : Form(obj) {
+	
+}
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
