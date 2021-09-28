@@ -50,7 +50,7 @@ void    displayAsFloat( std::string value ) {
     }
     try {
         std::cout << static_cast< float >(stof(value));
-        if (stoi(value) == static_cast< float >(stof(value))) {
+        if (static_cast< int >(stof(value)) == static_cast< float >(stof(value))) {
             std::cout << ".0f";
         }
         else
@@ -72,7 +72,7 @@ void    displayAsDouble( std::string value ) {
     }
     try {
         std::cout << static_cast< double >(stod(value));
-        if (stoi(value) == static_cast< double >(stod(value))) {
+        if (static_cast< int >(stod(value)) == static_cast< double >(stod(value))) {
             std::cout << ".0";
         }
     }
