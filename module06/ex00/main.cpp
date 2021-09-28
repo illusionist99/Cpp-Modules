@@ -96,5 +96,7 @@ int     main( int ac, char **av) {
 
     if (ac == 2)
         convert(av[1]);
+    else
+        std::cout << "Error\n";
     return (0);
 }

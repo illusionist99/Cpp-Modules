@@ -27,7 +27,7 @@ Data    *deserialize(uintptr_t raw) {
 }
 
 
-int main( void ) {
+int     main( void ) {
 
     Data *p = new Data;
 
