@@ -1,5 +1,5 @@
 # include "Base.hpp"
-# include <iostream>
+
 
 Base    *generate( void  ) {
 
@@ -31,6 +31,7 @@ void    identify( Base &p ) {
 
    try {
         A& r1 = dynamic_cast<A&>(p);
+        (void)r1;
         std::cout << "A" << std::endl;
     }
     catch (std::exception& e) {
@@ -38,12 +39,14 @@ void    identify( Base &p ) {
 
     try {
         B& r1 = dynamic_cast<B&>(p);
+        (void)r1;
         std::cout << "B" << std::endl;
     }
     catch (std::exception& e) {}
 
     try {
         C& r1 = dynamic_cast<C&>(p);
+        (void)r1;
         std::cout << "C" << std::endl;
     }
     catch (std::exception& e) {}
