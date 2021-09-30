@@ -18,9 +18,11 @@ max max(max a, max b) {
 
 
 template < typename swapv>
-void    swap(swapv *a, swapv *b) {
+void    swap(swapv &a, swapv &b) {
 
-    swapv c = *b;
-    *b = *a;
-    *a = c;
+    swapv c;
+
+    c = b;
+    b = a;
+    a = c;
 };
