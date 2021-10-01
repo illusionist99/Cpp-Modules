@@ -4,7 +4,7 @@
 
 
 template < typename T>
-void    iter(T &array, T lenght, T &function) {
+void    iter(T array[], int lenght, void (*function)(T const &)) {
 
     int i;
 
