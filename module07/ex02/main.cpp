@@ -10,7 +10,7 @@ int main(int, char**)
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
     {
-        const int value = rand();
+        const int value = rand() % MAX_VAL;
         numbers[i] = value;
         mirror[i] = value;
     }
@@ -28,6 +28,7 @@ int main(int, char**)
             return 1;
         }
     }
+    std::cout << numbers[0] << "this is a test\n";
     try
     {
         numbers[-2] = 0;
