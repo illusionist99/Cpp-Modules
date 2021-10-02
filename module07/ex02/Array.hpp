@@ -14,28 +14,22 @@ class Array {
         class outOffLimit : public std::exception {
             public:
                 const   char  * what()  const throw () {
-                    return "Out Off Limit";
+                    return "Array Index Out Of Bound";
                 }
         };
 
-        Array( void ) { _array = new T();};
-        Array( unsigned int n ) {_array = new T[n](); _n = n;};
-        ~Array( void ) {
-            // if (_array != NULL)
-            //     delete [] _array;
-        }
-        T&  operator=( Array const & src ) {
+        Array( void ) { _array = T();};
 
-            // if (_array)
-            //     delete[] _array;
-            //_n = src.size();
-            //unsigned int i = 0;
+        Array( unsigned int n ) {_array = new T[n](); _n = n;};
+
+        ~Array( void ) {};
+
+        Array&  operator=( Array const & src ) {
+
+            if (_array)
+                delete _array;
             _n = src.size();
             _array = src.getArray();
-            // while (i < _n) {
-            //     _array[i] = src._array[i];
-            //     i++;
-            // }
             return (*this);
         };
 
@@ -50,13 +44,12 @@ class Array {
         };
 
         Array( Array const & src) {
-            // if (_array)
-            //     delete[] _array;
+            if (_array)
+                delete _array;
             _n = src.size();
             _array = src.getArray();
         };
         
-
         T   *getArray( void ) const { return _array; };
         unsigned int size() const {return _n;};
 };
