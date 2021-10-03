@@ -1,10 +1,14 @@
 # include "easyfind.hpp"
-
+# include <vector>
 
 int     main( void ) {
 
-    int t[] = {0, 5, 8, 9, 10};
-    std::cout << easyfind(t, -90) << std::endl;
 
+    std::vector< int > f;
+    f.push_back(10);
+    f.push_back(5);
+    f.push_back(0); 
+
+    std::cout << easyfind(f, -90) << std::endl;
     return (0);
 }

@@ -5,16 +5,13 @@
 template< typename T>
 int    easyfind(T & src, int n) {
 
-    int i;
-    int size;
+    typename T::iterator it;
 
-    i = 0;
-    size = sizeof(T) / sizeof(int);
-    std::cout << "Size is " << size << std::endl;
-    while (i < size) {
-        if (src[i] == n)
-            return (0);
-        i++;
+    it = std::find(src.begin(), src.end(), n);
+    if (it != src.end()) {
+        std::cout << n << " Was Found\n";
+        return 0;
     }
-    return (1);
+    std::cout << "Was not Found\n";
+    return 1;
 }
