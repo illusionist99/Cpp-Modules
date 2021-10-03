@@ -34,8 +34,8 @@ class Span {
             _mem =  new int[n];
         };
         ~Span( void ) {
-            // if (_mem)
-            //     delete [] _mem;
+            if (_mem)
+                delete [] _mem;
         }
         void addNumber( int number ) {
         
