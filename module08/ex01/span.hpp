@@ -31,11 +31,11 @@ class Span {
 
             _index = 0;
             _n = n;
-            _mem =  new (std::nothrow) int[n];
+            _mem =  new int[n];
         };
         ~Span( void ) {
-            if (_mem)
-                delete [] _mem;
+            // if (_mem)
+            //     delete [] _mem;
         }
         void addNumber( int number ) {
         
@@ -46,6 +46,23 @@ class Span {
                 _index++;
             }
         };
+
+        template < typename T> 
+        void addNumber(T &src) {
+
+            typename T::iterator it;
+            if (_index  + src.size() > _n)
+                throw Span::storeFull();
+            int i;
+        
+            i = 0;
+            it = src.begin();
+            while (it != src.end()){
+                _mem[_index++] = *it;
+                it++;
+            }
+        };
+
         int shortestSpan( void ) {
 
             if (_index <= 1)
