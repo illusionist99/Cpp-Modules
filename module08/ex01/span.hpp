@@ -79,5 +79,4 @@ class Span {
             std::sort(tmp, tmp + _n);
             return (tmp[_n - 1] - tmp[0]);
         }
-
 };
