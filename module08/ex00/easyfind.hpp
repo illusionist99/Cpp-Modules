@@ -3,15 +3,20 @@
 # include <iostream>
 
 template< typename T>
-int    easyfind(T & src, int n) {
+void    easyfind(T & src, int n) {
 
+    class notFound : public std::exception {
+        public:
+        const char * what( void ) const throw() {
+        
+            return "Not Found";
+        };
+    };
     typename T::iterator it;
 
     it = std::find(src.begin(), src.end(), n);
-    if (it != src.end()) {
+    if (it != src.end())
         std::cout << n << " Was Found\n";
-        return 0;
-    }
-    std::cout << "Was not Found\n";
-    return 1;
+    else
+        throw notFound();
 }

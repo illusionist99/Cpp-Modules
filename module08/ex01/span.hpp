@@ -4,21 +4,6 @@
 
 class Span {
 
-
-    class storeFull : public std::exception {
-        public:
-        const char  *what(void) const throw() {
-            return "Store is Full";
-        }
-    };
-
-    class spanError : public std::exception {
-        public:
-        const char *what(void) const  throw() {
-            return "Not enought element";
-        }
-    };
-
     private:
         unsigned int _n;
         unsigned int _index;
@@ -27,25 +12,9 @@ class Span {
  
     public:
 
-        Span( unsigned int n ) {
-
-            _index = 0;
-            _n = n;
-            _mem =  new int[n];
-        };
-        ~Span( void ) {
-            if (_mem)
-                delete [] _mem;
-        }
-        void addNumber( int number ) {
-        
-            if (_index > _n)
-                throw Span::storeFull();
-            else {
-                _mem[_index] = number;
-                _index++;
-            }
-        };
+        Span( unsigned int n );
+        ~Span( void );
+        void addNumber( int number );
 
         template < typename T> 
         void addNumber(T &src) {
@@ -63,20 +32,20 @@ class Span {
             }
         };
 
-        int shortestSpan( void ) {
+        int shortestSpan( void );
+        int longestSpan( void );
 
-            if (_index <= 1)
-                throw Span::spanError();
-            int *tmp = _mem;
-            std::sort(tmp, tmp + _n);
-            return (tmp[1] - tmp[0]);
-        }
-        int longestSpan( void ) {
+        class storeFull : public std::exception {
+            public:
+            const char  *what(void) const throw() {
+                return "Store is Full";
+                }
+        };
 
-            if (_index <= 1)
-                throw Span::spanError();
-            int *tmp = _mem;
-            std::sort(tmp, tmp + _n);
-            return (tmp[_n - 1] - tmp[0]);
-        }
+        class spanError : public std::exception {
+            public:
+            const char *what(void) const  throw() {
+                return "Not enought element";
+            }
+        };
 };
